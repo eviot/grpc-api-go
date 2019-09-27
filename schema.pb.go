@@ -52,10 +52,10 @@ func (x Value_Type) String() string {
 }
 
 func (Value_Type) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{24, 0}
+	return fileDescriptor_98b0d2c3e7e0142d, []int{22, 0}
 }
 
-type PipeSendRequest struct {
+type SendPipeRequest struct {
 	DeviceID             string            `protobuf:"bytes,1,opt,name=deviceID,proto3" json:"deviceID,omitempty"`
 	PipeID               string            `protobuf:"bytes,2,opt,name=pipeID,proto3" json:"pipeID,omitempty"`
 	OutputID             string            `protobuf:"bytes,3,opt,name=outputID,proto3" json:"outputID,omitempty"`
@@ -65,91 +65,91 @@ type PipeSendRequest struct {
 	XXX_sizecache        int32             `json:"-"`
 }
 
-func (m *PipeSendRequest) Reset()         { *m = PipeSendRequest{} }
-func (m *PipeSendRequest) String() string { return proto.CompactTextString(m) }
-func (*PipeSendRequest) ProtoMessage()    {}
-func (*PipeSendRequest) Descriptor() ([]byte, []int) {
+func (m *SendPipeRequest) Reset()         { *m = SendPipeRequest{} }
+func (m *SendPipeRequest) String() string { return proto.CompactTextString(m) }
+func (*SendPipeRequest) ProtoMessage()    {}
+func (*SendPipeRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_98b0d2c3e7e0142d, []int{0}
 }
 
-func (m *PipeSendRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PipeSendRequest.Unmarshal(m, b)
+func (m *SendPipeRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SendPipeRequest.Unmarshal(m, b)
 }
-func (m *PipeSendRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PipeSendRequest.Marshal(b, m, deterministic)
+func (m *SendPipeRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SendPipeRequest.Marshal(b, m, deterministic)
 }
-func (m *PipeSendRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PipeSendRequest.Merge(m, src)
+func (m *SendPipeRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SendPipeRequest.Merge(m, src)
 }
-func (m *PipeSendRequest) XXX_Size() int {
-	return xxx_messageInfo_PipeSendRequest.Size(m)
+func (m *SendPipeRequest) XXX_Size() int {
+	return xxx_messageInfo_SendPipeRequest.Size(m)
 }
-func (m *PipeSendRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_PipeSendRequest.DiscardUnknown(m)
+func (m *SendPipeRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SendPipeRequest.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_PipeSendRequest proto.InternalMessageInfo
+var xxx_messageInfo_SendPipeRequest proto.InternalMessageInfo
 
-func (m *PipeSendRequest) GetDeviceID() string {
+func (m *SendPipeRequest) GetDeviceID() string {
 	if m != nil {
 		return m.DeviceID
 	}
 	return ""
 }
 
-func (m *PipeSendRequest) GetPipeID() string {
+func (m *SendPipeRequest) GetPipeID() string {
 	if m != nil {
 		return m.PipeID
 	}
 	return ""
 }
 
-func (m *PipeSendRequest) GetOutputID() string {
+func (m *SendPipeRequest) GetOutputID() string {
 	if m != nil {
 		return m.OutputID
 	}
 	return ""
 }
 
-func (m *PipeSendRequest) GetMessage() map[string]*Value {
+func (m *SendPipeRequest) GetMessage() map[string]*Value {
 	if m != nil {
 		return m.Message
 	}
 	return nil
 }
 
-type PipeSendResponse struct {
+type SendPipeResponse struct {
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *PipeSendResponse) Reset()         { *m = PipeSendResponse{} }
-func (m *PipeSendResponse) String() string { return proto.CompactTextString(m) }
-func (*PipeSendResponse) ProtoMessage()    {}
-func (*PipeSendResponse) Descriptor() ([]byte, []int) {
+func (m *SendPipeResponse) Reset()         { *m = SendPipeResponse{} }
+func (m *SendPipeResponse) String() string { return proto.CompactTextString(m) }
+func (*SendPipeResponse) ProtoMessage()    {}
+func (*SendPipeResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_98b0d2c3e7e0142d, []int{1}
 }
 
-func (m *PipeSendResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PipeSendResponse.Unmarshal(m, b)
+func (m *SendPipeResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SendPipeResponse.Unmarshal(m, b)
 }
-func (m *PipeSendResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PipeSendResponse.Marshal(b, m, deterministic)
+func (m *SendPipeResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SendPipeResponse.Marshal(b, m, deterministic)
 }
-func (m *PipeSendResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PipeSendResponse.Merge(m, src)
+func (m *SendPipeResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SendPipeResponse.Merge(m, src)
 }
-func (m *PipeSendResponse) XXX_Size() int {
-	return xxx_messageInfo_PipeSendResponse.Size(m)
+func (m *SendPipeResponse) XXX_Size() int {
+	return xxx_messageInfo_SendPipeResponse.Size(m)
 }
-func (m *PipeSendResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_PipeSendResponse.DiscardUnknown(m)
+func (m *SendPipeResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SendPipeResponse.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_PipeSendResponse proto.InternalMessageInfo
+var xxx_messageInfo_SendPipeResponse proto.InternalMessageInfo
 
-type PipeReceiveRequest struct {
+type ReceivePipeRequest struct {
 	// string deviceID = 2;
 	PipeTypeID           string   `protobuf:"bytes,1,opt,name=pipeTypeID,proto3" json:"pipeTypeID,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -157,39 +157,39 @@ type PipeReceiveRequest struct {
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *PipeReceiveRequest) Reset()         { *m = PipeReceiveRequest{} }
-func (m *PipeReceiveRequest) String() string { return proto.CompactTextString(m) }
-func (*PipeReceiveRequest) ProtoMessage()    {}
-func (*PipeReceiveRequest) Descriptor() ([]byte, []int) {
+func (m *ReceivePipeRequest) Reset()         { *m = ReceivePipeRequest{} }
+func (m *ReceivePipeRequest) String() string { return proto.CompactTextString(m) }
+func (*ReceivePipeRequest) ProtoMessage()    {}
+func (*ReceivePipeRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_98b0d2c3e7e0142d, []int{2}
 }
 
-func (m *PipeReceiveRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PipeReceiveRequest.Unmarshal(m, b)
+func (m *ReceivePipeRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ReceivePipeRequest.Unmarshal(m, b)
 }
-func (m *PipeReceiveRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PipeReceiveRequest.Marshal(b, m, deterministic)
+func (m *ReceivePipeRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ReceivePipeRequest.Marshal(b, m, deterministic)
 }
-func (m *PipeReceiveRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PipeReceiveRequest.Merge(m, src)
+func (m *ReceivePipeRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ReceivePipeRequest.Merge(m, src)
 }
-func (m *PipeReceiveRequest) XXX_Size() int {
-	return xxx_messageInfo_PipeReceiveRequest.Size(m)
+func (m *ReceivePipeRequest) XXX_Size() int {
+	return xxx_messageInfo_ReceivePipeRequest.Size(m)
 }
-func (m *PipeReceiveRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_PipeReceiveRequest.DiscardUnknown(m)
+func (m *ReceivePipeRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_ReceivePipeRequest.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_PipeReceiveRequest proto.InternalMessageInfo
+var xxx_messageInfo_ReceivePipeRequest proto.InternalMessageInfo
 
-func (m *PipeReceiveRequest) GetPipeTypeID() string {
+func (m *ReceivePipeRequest) GetPipeTypeID() string {
 	if m != nil {
 		return m.PipeTypeID
 	}
 	return ""
 }
 
-type PipeReceiveResponse struct {
+type ReceivePipeResponse struct {
 	DeviceID             string            `protobuf:"bytes,5,opt,name=deviceID,proto3" json:"deviceID,omitempty"`
 	PipeTypeID           string            `protobuf:"bytes,4,opt,name=pipeTypeID,proto3" json:"pipeTypeID,omitempty"`
 	PipeID               string            `protobuf:"bytes,3,opt,name=pipeID,proto3" json:"pipeID,omitempty"`
@@ -201,67 +201,67 @@ type PipeReceiveResponse struct {
 	XXX_sizecache        int32             `json:"-"`
 }
 
-func (m *PipeReceiveResponse) Reset()         { *m = PipeReceiveResponse{} }
-func (m *PipeReceiveResponse) String() string { return proto.CompactTextString(m) }
-func (*PipeReceiveResponse) ProtoMessage()    {}
-func (*PipeReceiveResponse) Descriptor() ([]byte, []int) {
+func (m *ReceivePipeResponse) Reset()         { *m = ReceivePipeResponse{} }
+func (m *ReceivePipeResponse) String() string { return proto.CompactTextString(m) }
+func (*ReceivePipeResponse) ProtoMessage()    {}
+func (*ReceivePipeResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_98b0d2c3e7e0142d, []int{3}
 }
 
-func (m *PipeReceiveResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PipeReceiveResponse.Unmarshal(m, b)
+func (m *ReceivePipeResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ReceivePipeResponse.Unmarshal(m, b)
 }
-func (m *PipeReceiveResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PipeReceiveResponse.Marshal(b, m, deterministic)
+func (m *ReceivePipeResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ReceivePipeResponse.Marshal(b, m, deterministic)
 }
-func (m *PipeReceiveResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PipeReceiveResponse.Merge(m, src)
+func (m *ReceivePipeResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ReceivePipeResponse.Merge(m, src)
 }
-func (m *PipeReceiveResponse) XXX_Size() int {
-	return xxx_messageInfo_PipeReceiveResponse.Size(m)
+func (m *ReceivePipeResponse) XXX_Size() int {
+	return xxx_messageInfo_ReceivePipeResponse.Size(m)
 }
-func (m *PipeReceiveResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_PipeReceiveResponse.DiscardUnknown(m)
+func (m *ReceivePipeResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_ReceivePipeResponse.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_PipeReceiveResponse proto.InternalMessageInfo
+var xxx_messageInfo_ReceivePipeResponse proto.InternalMessageInfo
 
-func (m *PipeReceiveResponse) GetDeviceID() string {
+func (m *ReceivePipeResponse) GetDeviceID() string {
 	if m != nil {
 		return m.DeviceID
 	}
 	return ""
 }
 
-func (m *PipeReceiveResponse) GetPipeTypeID() string {
+func (m *ReceivePipeResponse) GetPipeTypeID() string {
 	if m != nil {
 		return m.PipeTypeID
 	}
 	return ""
 }
 
-func (m *PipeReceiveResponse) GetPipeID() string {
+func (m *ReceivePipeResponse) GetPipeID() string {
 	if m != nil {
 		return m.PipeID
 	}
 	return ""
 }
 
-func (m *PipeReceiveResponse) GetInputID() string {
+func (m *ReceivePipeResponse) GetInputID() string {
 	if m != nil {
 		return m.InputID
 	}
 	return ""
 }
 
-func (m *PipeReceiveResponse) GetMessage() map[string]*Value {
+func (m *ReceivePipeResponse) GetMessage() map[string]*Value {
 	if m != nil {
 		return m.Message
 	}
 	return nil
 }
 
-func (m *PipeReceiveResponse) GetParams() map[string]*Value {
+func (m *ReceivePipeResponse) GetParams() map[string]*Value {
 	if m != nil {
 		return m.Params
 	}
@@ -627,234 +627,268 @@ func (m *SetDeviceOnlineResponse) GetOk() bool {
 	return false
 }
 
-type UserRequest struct {
-	ID                   string   `protobuf:"bytes,1,opt,name=ID,proto3" json:"ID,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+type GetUserRequest struct {
+	// Types that are valid to be assigned to Filter:
+	//	*GetUserRequest_ID
+	//	*GetUserRequest_Email
+	//	*GetUserRequest_Token
+	//	*GetUserRequest_UserID
+	Filter               isGetUserRequest_Filter `protobuf_oneof:"filter"`
+	XXX_NoUnkeyedLiteral struct{}                `json:"-"`
+	XXX_unrecognized     []byte                  `json:"-"`
+	XXX_sizecache        int32                   `json:"-"`
 }
 
-func (m *UserRequest) Reset()         { *m = UserRequest{} }
-func (m *UserRequest) String() string { return proto.CompactTextString(m) }
-func (*UserRequest) ProtoMessage()    {}
-func (*UserRequest) Descriptor() ([]byte, []int) {
+func (m *GetUserRequest) Reset()         { *m = GetUserRequest{} }
+func (m *GetUserRequest) String() string { return proto.CompactTextString(m) }
+func (*GetUserRequest) ProtoMessage()    {}
+func (*GetUserRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_98b0d2c3e7e0142d, []int{12}
 }
 
-func (m *UserRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_UserRequest.Unmarshal(m, b)
+func (m *GetUserRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetUserRequest.Unmarshal(m, b)
 }
-func (m *UserRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_UserRequest.Marshal(b, m, deterministic)
+func (m *GetUserRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetUserRequest.Marshal(b, m, deterministic)
 }
-func (m *UserRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_UserRequest.Merge(m, src)
+func (m *GetUserRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetUserRequest.Merge(m, src)
 }
-func (m *UserRequest) XXX_Size() int {
-	return xxx_messageInfo_UserRequest.Size(m)
+func (m *GetUserRequest) XXX_Size() int {
+	return xxx_messageInfo_GetUserRequest.Size(m)
 }
-func (m *UserRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_UserRequest.DiscardUnknown(m)
+func (m *GetUserRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetUserRequest.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_UserRequest proto.InternalMessageInfo
+var xxx_messageInfo_GetUserRequest proto.InternalMessageInfo
 
-func (m *UserRequest) GetID() string {
+type isGetUserRequest_Filter interface {
+	isGetUserRequest_Filter()
+}
+
+type GetUserRequest_ID struct {
+	ID string `protobuf:"bytes,1,opt,name=ID,proto3,oneof"`
+}
+
+type GetUserRequest_Email struct {
+	Email string `protobuf:"bytes,2,opt,name=email,proto3,oneof"`
+}
+
+type GetUserRequest_Token struct {
+	Token string `protobuf:"bytes,3,opt,name=token,proto3,oneof"`
+}
+
+type GetUserRequest_UserID struct {
+	UserID string `protobuf:"bytes,4,opt,name=userID,proto3,oneof"`
+}
+
+func (*GetUserRequest_ID) isGetUserRequest_Filter() {}
+
+func (*GetUserRequest_Email) isGetUserRequest_Filter() {}
+
+func (*GetUserRequest_Token) isGetUserRequest_Filter() {}
+
+func (*GetUserRequest_UserID) isGetUserRequest_Filter() {}
+
+func (m *GetUserRequest) GetFilter() isGetUserRequest_Filter {
 	if m != nil {
-		return m.ID
+		return m.Filter
+	}
+	return nil
+}
+
+func (m *GetUserRequest) GetID() string {
+	if x, ok := m.GetFilter().(*GetUserRequest_ID); ok {
+		return x.ID
 	}
 	return ""
 }
 
-type UserByEmailRequest struct {
-	Email                string   `protobuf:"bytes,1,opt,name=email,proto3" json:"email,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+func (m *GetUserRequest) GetEmail() string {
+	if x, ok := m.GetFilter().(*GetUserRequest_Email); ok {
+		return x.Email
+	}
+	return ""
 }
 
-func (m *UserByEmailRequest) Reset()         { *m = UserByEmailRequest{} }
-func (m *UserByEmailRequest) String() string { return proto.CompactTextString(m) }
-func (*UserByEmailRequest) ProtoMessage()    {}
-func (*UserByEmailRequest) Descriptor() ([]byte, []int) {
+func (m *GetUserRequest) GetToken() string {
+	if x, ok := m.GetFilter().(*GetUserRequest_Token); ok {
+		return x.Token
+	}
+	return ""
+}
+
+func (m *GetUserRequest) GetUserID() string {
+	if x, ok := m.GetFilter().(*GetUserRequest_UserID); ok {
+		return x.UserID
+	}
+	return ""
+}
+
+// XXX_OneofWrappers is for the internal use of the proto package.
+func (*GetUserRequest) XXX_OneofWrappers() []interface{} {
+	return []interface{}{
+		(*GetUserRequest_ID)(nil),
+		(*GetUserRequest_Email)(nil),
+		(*GetUserRequest_Token)(nil),
+		(*GetUserRequest_UserID)(nil),
+	}
+}
+
+type GetTokenRequest struct {
+	// Types that are valid to be assigned to Filter:
+	//	*GetTokenRequest_Value
+	//	*GetTokenRequest_TargetID
+	Filter               isGetTokenRequest_Filter `protobuf_oneof:"filter"`
+	XXX_NoUnkeyedLiteral struct{}                 `json:"-"`
+	XXX_unrecognized     []byte                   `json:"-"`
+	XXX_sizecache        int32                    `json:"-"`
+}
+
+func (m *GetTokenRequest) Reset()         { *m = GetTokenRequest{} }
+func (m *GetTokenRequest) String() string { return proto.CompactTextString(m) }
+func (*GetTokenRequest) ProtoMessage()    {}
+func (*GetTokenRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_98b0d2c3e7e0142d, []int{13}
 }
 
-func (m *UserByEmailRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_UserByEmailRequest.Unmarshal(m, b)
+func (m *GetTokenRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetTokenRequest.Unmarshal(m, b)
 }
-func (m *UserByEmailRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_UserByEmailRequest.Marshal(b, m, deterministic)
+func (m *GetTokenRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetTokenRequest.Marshal(b, m, deterministic)
 }
-func (m *UserByEmailRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_UserByEmailRequest.Merge(m, src)
+func (m *GetTokenRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetTokenRequest.Merge(m, src)
 }
-func (m *UserByEmailRequest) XXX_Size() int {
-	return xxx_messageInfo_UserByEmailRequest.Size(m)
+func (m *GetTokenRequest) XXX_Size() int {
+	return xxx_messageInfo_GetTokenRequest.Size(m)
 }
-func (m *UserByEmailRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_UserByEmailRequest.DiscardUnknown(m)
+func (m *GetTokenRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetTokenRequest.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_UserByEmailRequest proto.InternalMessageInfo
+var xxx_messageInfo_GetTokenRequest proto.InternalMessageInfo
 
-func (m *UserByEmailRequest) GetEmail() string {
+type isGetTokenRequest_Filter interface {
+	isGetTokenRequest_Filter()
+}
+
+type GetTokenRequest_Value struct {
+	Value string `protobuf:"bytes,1,opt,name=value,proto3,oneof"`
+}
+
+type GetTokenRequest_TargetID struct {
+	TargetID string `protobuf:"bytes,2,opt,name=targetID,proto3,oneof"`
+}
+
+func (*GetTokenRequest_Value) isGetTokenRequest_Filter() {}
+
+func (*GetTokenRequest_TargetID) isGetTokenRequest_Filter() {}
+
+func (m *GetTokenRequest) GetFilter() isGetTokenRequest_Filter {
 	if m != nil {
-		return m.Email
+		return m.Filter
+	}
+	return nil
+}
+
+func (m *GetTokenRequest) GetValue() string {
+	if x, ok := m.GetFilter().(*GetTokenRequest_Value); ok {
+		return x.Value
 	}
 	return ""
 }
 
-type UserByTokenRequest struct {
-	Token                string   `protobuf:"bytes,1,opt,name=token,proto3" json:"token,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *UserByTokenRequest) Reset()         { *m = UserByTokenRequest{} }
-func (m *UserByTokenRequest) String() string { return proto.CompactTextString(m) }
-func (*UserByTokenRequest) ProtoMessage()    {}
-func (*UserByTokenRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{14}
-}
-
-func (m *UserByTokenRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_UserByTokenRequest.Unmarshal(m, b)
-}
-func (m *UserByTokenRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_UserByTokenRequest.Marshal(b, m, deterministic)
-}
-func (m *UserByTokenRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_UserByTokenRequest.Merge(m, src)
-}
-func (m *UserByTokenRequest) XXX_Size() int {
-	return xxx_messageInfo_UserByTokenRequest.Size(m)
-}
-func (m *UserByTokenRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_UserByTokenRequest.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_UserByTokenRequest proto.InternalMessageInfo
-
-func (m *UserByTokenRequest) GetToken() string {
-	if m != nil {
-		return m.Token
+func (m *GetTokenRequest) GetTargetID() string {
+	if x, ok := m.GetFilter().(*GetTokenRequest_TargetID); ok {
+		return x.TargetID
 	}
 	return ""
 }
 
-type TokenRequest struct {
-	Value                string   `protobuf:"bytes,1,opt,name=value,proto3" json:"value,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *TokenRequest) Reset()         { *m = TokenRequest{} }
-func (m *TokenRequest) String() string { return proto.CompactTextString(m) }
-func (*TokenRequest) ProtoMessage()    {}
-func (*TokenRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{15}
-}
-
-func (m *TokenRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_TokenRequest.Unmarshal(m, b)
-}
-func (m *TokenRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_TokenRequest.Marshal(b, m, deterministic)
-}
-func (m *TokenRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_TokenRequest.Merge(m, src)
-}
-func (m *TokenRequest) XXX_Size() int {
-	return xxx_messageInfo_TokenRequest.Size(m)
-}
-func (m *TokenRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_TokenRequest.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_TokenRequest proto.InternalMessageInfo
-
-func (m *TokenRequest) GetValue() string {
-	if m != nil {
-		return m.Value
+// XXX_OneofWrappers is for the internal use of the proto package.
+func (*GetTokenRequest) XXX_OneofWrappers() []interface{} {
+	return []interface{}{
+		(*GetTokenRequest_Value)(nil),
+		(*GetTokenRequest_TargetID)(nil),
 	}
-	return ""
 }
 
-type DeviceRequest struct {
+type GetDeviceRequest struct {
 	ID                   string   `protobuf:"bytes,1,opt,name=ID,proto3" json:"ID,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *DeviceRequest) Reset()         { *m = DeviceRequest{} }
-func (m *DeviceRequest) String() string { return proto.CompactTextString(m) }
-func (*DeviceRequest) ProtoMessage()    {}
-func (*DeviceRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{16}
+func (m *GetDeviceRequest) Reset()         { *m = GetDeviceRequest{} }
+func (m *GetDeviceRequest) String() string { return proto.CompactTextString(m) }
+func (*GetDeviceRequest) ProtoMessage()    {}
+func (*GetDeviceRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_98b0d2c3e7e0142d, []int{14}
 }
 
-func (m *DeviceRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_DeviceRequest.Unmarshal(m, b)
+func (m *GetDeviceRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetDeviceRequest.Unmarshal(m, b)
 }
-func (m *DeviceRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_DeviceRequest.Marshal(b, m, deterministic)
+func (m *GetDeviceRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetDeviceRequest.Marshal(b, m, deterministic)
 }
-func (m *DeviceRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_DeviceRequest.Merge(m, src)
+func (m *GetDeviceRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetDeviceRequest.Merge(m, src)
 }
-func (m *DeviceRequest) XXX_Size() int {
-	return xxx_messageInfo_DeviceRequest.Size(m)
+func (m *GetDeviceRequest) XXX_Size() int {
+	return xxx_messageInfo_GetDeviceRequest.Size(m)
 }
-func (m *DeviceRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_DeviceRequest.DiscardUnknown(m)
+func (m *GetDeviceRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetDeviceRequest.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_DeviceRequest proto.InternalMessageInfo
+var xxx_messageInfo_GetDeviceRequest proto.InternalMessageInfo
 
-func (m *DeviceRequest) GetID() string {
+func (m *GetDeviceRequest) GetID() string {
 	if m != nil {
 		return m.ID
 	}
 	return ""
 }
 
-type DeviceTypeRequest struct {
+type GetDeviceTypeRequest struct {
 	ID                   string   `protobuf:"bytes,1,opt,name=ID,proto3" json:"ID,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *DeviceTypeRequest) Reset()         { *m = DeviceTypeRequest{} }
-func (m *DeviceTypeRequest) String() string { return proto.CompactTextString(m) }
-func (*DeviceTypeRequest) ProtoMessage()    {}
-func (*DeviceTypeRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{17}
+func (m *GetDeviceTypeRequest) Reset()         { *m = GetDeviceTypeRequest{} }
+func (m *GetDeviceTypeRequest) String() string { return proto.CompactTextString(m) }
+func (*GetDeviceTypeRequest) ProtoMessage()    {}
+func (*GetDeviceTypeRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_98b0d2c3e7e0142d, []int{15}
 }
 
-func (m *DeviceTypeRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_DeviceTypeRequest.Unmarshal(m, b)
+func (m *GetDeviceTypeRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetDeviceTypeRequest.Unmarshal(m, b)
 }
-func (m *DeviceTypeRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_DeviceTypeRequest.Marshal(b, m, deterministic)
+func (m *GetDeviceTypeRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetDeviceTypeRequest.Marshal(b, m, deterministic)
 }
-func (m *DeviceTypeRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_DeviceTypeRequest.Merge(m, src)
+func (m *GetDeviceTypeRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetDeviceTypeRequest.Merge(m, src)
 }
-func (m *DeviceTypeRequest) XXX_Size() int {
-	return xxx_messageInfo_DeviceTypeRequest.Size(m)
+func (m *GetDeviceTypeRequest) XXX_Size() int {
+	return xxx_messageInfo_GetDeviceTypeRequest.Size(m)
 }
-func (m *DeviceTypeRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_DeviceTypeRequest.DiscardUnknown(m)
+func (m *GetDeviceTypeRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetDeviceTypeRequest.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_DeviceTypeRequest proto.InternalMessageInfo
+var xxx_messageInfo_GetDeviceTypeRequest proto.InternalMessageInfo
 
-func (m *DeviceTypeRequest) GetID() string {
+func (m *GetDeviceTypeRequest) GetID() string {
 	if m != nil {
 		return m.ID
 	}
@@ -873,7 +907,7 @@ func (m *LoginRequest) Reset()         { *m = LoginRequest{} }
 func (m *LoginRequest) String() string { return proto.CompactTextString(m) }
 func (*LoginRequest) ProtoMessage()    {}
 func (*LoginRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{18}
+	return fileDescriptor_98b0d2c3e7e0142d, []int{16}
 }
 
 func (m *LoginRequest) XXX_Unmarshal(b []byte) error {
@@ -920,7 +954,7 @@ func (m *CreateUserRequest) Reset()         { *m = CreateUserRequest{} }
 func (m *CreateUserRequest) String() string { return proto.CompactTextString(m) }
 func (*CreateUserRequest) ProtoMessage()    {}
 func (*CreateUserRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{19}
+	return fileDescriptor_98b0d2c3e7e0142d, []int{17}
 }
 
 func (m *CreateUserRequest) XXX_Unmarshal(b []byte) error {
@@ -966,7 +1000,7 @@ func (m *SendResetPasswordLinkRequest) Reset()         { *m = SendResetPasswordL
 func (m *SendResetPasswordLinkRequest) String() string { return proto.CompactTextString(m) }
 func (*SendResetPasswordLinkRequest) ProtoMessage()    {}
 func (*SendResetPasswordLinkRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{20}
+	return fileDescriptor_98b0d2c3e7e0142d, []int{18}
 }
 
 func (m *SendResetPasswordLinkRequest) XXX_Unmarshal(b []byte) error {
@@ -1005,7 +1039,7 @@ func (m *SendResetPasswordLinkResponse) Reset()         { *m = SendResetPassword
 func (m *SendResetPasswordLinkResponse) String() string { return proto.CompactTextString(m) }
 func (*SendResetPasswordLinkResponse) ProtoMessage()    {}
 func (*SendResetPasswordLinkResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{21}
+	return fileDescriptor_98b0d2c3e7e0142d, []int{19}
 }
 
 func (m *SendResetPasswordLinkResponse) XXX_Unmarshal(b []byte) error {
@@ -1045,7 +1079,7 @@ func (m *ResetPasswordRequest) Reset()         { *m = ResetPasswordRequest{} }
 func (m *ResetPasswordRequest) String() string { return proto.CompactTextString(m) }
 func (*ResetPasswordRequest) ProtoMessage()    {}
 func (*ResetPasswordRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{22}
+	return fileDescriptor_98b0d2c3e7e0142d, []int{20}
 }
 
 func (m *ResetPasswordRequest) XXX_Unmarshal(b []byte) error {
@@ -1091,7 +1125,7 @@ func (m *ResetPasswordResponse) Reset()         { *m = ResetPasswordResponse{} }
 func (m *ResetPasswordResponse) String() string { return proto.CompactTextString(m) }
 func (*ResetPasswordResponse) ProtoMessage()    {}
 func (*ResetPasswordResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{23}
+	return fileDescriptor_98b0d2c3e7e0142d, []int{21}
 }
 
 func (m *ResetPasswordResponse) XXX_Unmarshal(b []byte) error {
@@ -1131,7 +1165,7 @@ func (m *Value) Reset()         { *m = Value{} }
 func (m *Value) String() string { return proto.CompactTextString(m) }
 func (*Value) ProtoMessage()    {}
 func (*Value) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{24}
+	return fileDescriptor_98b0d2c3e7e0142d, []int{22}
 }
 
 func (m *Value) XXX_Unmarshal(b []byte) error {
@@ -1178,7 +1212,7 @@ func (m *UnixTime) Reset()         { *m = UnixTime{} }
 func (m *UnixTime) String() string { return proto.CompactTextString(m) }
 func (*UnixTime) ProtoMessage()    {}
 func (*UnixTime) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{25}
+	return fileDescriptor_98b0d2c3e7e0142d, []int{23}
 }
 
 func (m *UnixTime) XXX_Unmarshal(b []byte) error {
@@ -1226,7 +1260,7 @@ func (m *User) Reset()         { *m = User{} }
 func (m *User) String() string { return proto.CompactTextString(m) }
 func (*User) ProtoMessage()    {}
 func (*User) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{26}
+	return fileDescriptor_98b0d2c3e7e0142d, []int{24}
 }
 
 func (m *User) XXX_Unmarshal(b []byte) error {
@@ -1280,7 +1314,7 @@ func (m *UserEmail) Reset()         { *m = UserEmail{} }
 func (m *UserEmail) String() string { return proto.CompactTextString(m) }
 func (*UserEmail) ProtoMessage()    {}
 func (*UserEmail) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{27}
+	return fileDescriptor_98b0d2c3e7e0142d, []int{25}
 }
 
 func (m *UserEmail) XXX_Unmarshal(b []byte) error {
@@ -1328,7 +1362,7 @@ func (m *Plugin) Reset()         { *m = Plugin{} }
 func (m *Plugin) String() string { return proto.CompactTextString(m) }
 func (*Plugin) ProtoMessage()    {}
 func (*Plugin) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{28}
+	return fileDescriptor_98b0d2c3e7e0142d, []int{26}
 }
 
 func (m *Plugin) XXX_Unmarshal(b []byte) error {
@@ -1385,7 +1419,7 @@ func (m *PipeType) Reset()         { *m = PipeType{} }
 func (m *PipeType) String() string { return proto.CompactTextString(m) }
 func (*PipeType) ProtoMessage()    {}
 func (*PipeType) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{29}
+	return fileDescriptor_98b0d2c3e7e0142d, []int{27}
 }
 
 func (m *PipeType) XXX_Unmarshal(b []byte) error {
@@ -1455,7 +1489,7 @@ func (m *PipeTypeParam) Reset()         { *m = PipeTypeParam{} }
 func (m *PipeTypeParam) String() string { return proto.CompactTextString(m) }
 func (*PipeTypeParam) ProtoMessage()    {}
 func (*PipeTypeParam) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{30}
+	return fileDescriptor_98b0d2c3e7e0142d, []int{28}
 }
 
 func (m *PipeTypeParam) XXX_Unmarshal(b []byte) error {
@@ -1518,7 +1552,7 @@ func (m *DeviceType) Reset()         { *m = DeviceType{} }
 func (m *DeviceType) String() string { return proto.CompactTextString(m) }
 func (*DeviceType) ProtoMessage()    {}
 func (*DeviceType) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{31}
+	return fileDescriptor_98b0d2c3e7e0142d, []int{29}
 }
 
 func (m *DeviceType) XXX_Unmarshal(b []byte) error {
@@ -1581,7 +1615,7 @@ func (m *DeviceTypeVariable) Reset()         { *m = DeviceTypeVariable{} }
 func (m *DeviceTypeVariable) String() string { return proto.CompactTextString(m) }
 func (*DeviceTypeVariable) ProtoMessage()    {}
 func (*DeviceTypeVariable) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{32}
+	return fileDescriptor_98b0d2c3e7e0142d, []int{30}
 }
 
 func (m *DeviceTypeVariable) XXX_Unmarshal(b []byte) error {
@@ -1641,7 +1675,7 @@ func (m *Flow) Reset()         { *m = Flow{} }
 func (m *Flow) String() string { return proto.CompactTextString(m) }
 func (*Flow) ProtoMessage()    {}
 func (*Flow) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{33}
+	return fileDescriptor_98b0d2c3e7e0142d, []int{31}
 }
 
 func (m *Flow) XXX_Unmarshal(b []byte) error {
@@ -1684,7 +1718,7 @@ func (m *Pipe) Reset()         { *m = Pipe{} }
 func (m *Pipe) String() string { return proto.CompactTextString(m) }
 func (*Pipe) ProtoMessage()    {}
 func (*Pipe) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{34}
+	return fileDescriptor_98b0d2c3e7e0142d, []int{32}
 }
 
 func (m *Pipe) XXX_Unmarshal(b []byte) error {
@@ -1753,7 +1787,7 @@ func (m *Bind) Reset()         { *m = Bind{} }
 func (m *Bind) String() string { return proto.CompactTextString(m) }
 func (*Bind) ProtoMessage()    {}
 func (*Bind) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{35}
+	return fileDescriptor_98b0d2c3e7e0142d, []int{33}
 }
 
 func (m *Bind) XXX_Unmarshal(b []byte) error {
@@ -1810,7 +1844,7 @@ func (m *Device) Reset()         { *m = Device{} }
 func (m *Device) String() string { return proto.CompactTextString(m) }
 func (*Device) ProtoMessage()    {}
 func (*Device) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{36}
+	return fileDescriptor_98b0d2c3e7e0142d, []int{34}
 }
 
 func (m *Device) XXX_Unmarshal(b []byte) error {
@@ -1879,7 +1913,7 @@ func (m *DeviceVariable) Reset()         { *m = DeviceVariable{} }
 func (m *DeviceVariable) String() string { return proto.CompactTextString(m) }
 func (*DeviceVariable) ProtoMessage()    {}
 func (*DeviceVariable) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{37}
+	return fileDescriptor_98b0d2c3e7e0142d, []int{35}
 }
 
 func (m *DeviceVariable) XXX_Unmarshal(b []byte) error {
@@ -1941,7 +1975,7 @@ func (m *Token) Reset()         { *m = Token{} }
 func (m *Token) String() string { return proto.CompactTextString(m) }
 func (*Token) ProtoMessage()    {}
 func (*Token) Descriptor() ([]byte, []int) {
-	return fileDescriptor_98b0d2c3e7e0142d, []int{38}
+	return fileDescriptor_98b0d2c3e7e0142d, []int{36}
 }
 
 func (m *Token) XXX_Unmarshal(b []byte) error {
@@ -2034,13 +2068,13 @@ func (m *Token) GetUsedAt() *UnixTime {
 
 func init() {
 	proto.RegisterEnum("schema.Value_Type", Value_Type_name, Value_Type_value)
-	proto.RegisterType((*PipeSendRequest)(nil), "schema.PipeSendRequest")
-	proto.RegisterMapType((map[string]*Value)(nil), "schema.PipeSendRequest.MessageEntry")
-	proto.RegisterType((*PipeSendResponse)(nil), "schema.PipeSendResponse")
-	proto.RegisterType((*PipeReceiveRequest)(nil), "schema.PipeReceiveRequest")
-	proto.RegisterType((*PipeReceiveResponse)(nil), "schema.PipeReceiveResponse")
-	proto.RegisterMapType((map[string]*Value)(nil), "schema.PipeReceiveResponse.MessageEntry")
-	proto.RegisterMapType((map[string]*Value)(nil), "schema.PipeReceiveResponse.ParamsEntry")
+	proto.RegisterType((*SendPipeRequest)(nil), "schema.SendPipeRequest")
+	proto.RegisterMapType((map[string]*Value)(nil), "schema.SendPipeRequest.MessageEntry")
+	proto.RegisterType((*SendPipeResponse)(nil), "schema.SendPipeResponse")
+	proto.RegisterType((*ReceivePipeRequest)(nil), "schema.ReceivePipeRequest")
+	proto.RegisterType((*ReceivePipeResponse)(nil), "schema.ReceivePipeResponse")
+	proto.RegisterMapType((map[string]*Value)(nil), "schema.ReceivePipeResponse.MessageEntry")
+	proto.RegisterMapType((map[string]*Value)(nil), "schema.ReceivePipeResponse.ParamsEntry")
 	proto.RegisterType((*OnInitFlowRequest)(nil), "schema.OnInitFlowRequest")
 	proto.RegisterType((*OnInitFlowResponse)(nil), "schema.OnInitFlowResponse")
 	proto.RegisterType((*OnPipeInitRequest)(nil), "schema.OnPipeInitRequest")
@@ -2050,12 +2084,10 @@ func init() {
 	proto.RegisterType((*RegDeviceResponse)(nil), "schema.RegDeviceResponse")
 	proto.RegisterType((*SetDeviceOnlineRequest)(nil), "schema.SetDeviceOnlineRequest")
 	proto.RegisterType((*SetDeviceOnlineResponse)(nil), "schema.SetDeviceOnlineResponse")
-	proto.RegisterType((*UserRequest)(nil), "schema.UserRequest")
-	proto.RegisterType((*UserByEmailRequest)(nil), "schema.UserByEmailRequest")
-	proto.RegisterType((*UserByTokenRequest)(nil), "schema.UserByTokenRequest")
-	proto.RegisterType((*TokenRequest)(nil), "schema.TokenRequest")
-	proto.RegisterType((*DeviceRequest)(nil), "schema.DeviceRequest")
-	proto.RegisterType((*DeviceTypeRequest)(nil), "schema.DeviceTypeRequest")
+	proto.RegisterType((*GetUserRequest)(nil), "schema.GetUserRequest")
+	proto.RegisterType((*GetTokenRequest)(nil), "schema.GetTokenRequest")
+	proto.RegisterType((*GetDeviceRequest)(nil), "schema.GetDeviceRequest")
+	proto.RegisterType((*GetDeviceTypeRequest)(nil), "schema.GetDeviceTypeRequest")
 	proto.RegisterType((*LoginRequest)(nil), "schema.LoginRequest")
 	proto.RegisterType((*CreateUserRequest)(nil), "schema.CreateUserRequest")
 	proto.RegisterType((*SendResetPasswordLinkRequest)(nil), "schema.SendResetPasswordLinkRequest")
@@ -2083,102 +2115,104 @@ func init() {
 func init() { proto.RegisterFile("schema/schema.proto", fileDescriptor_98b0d2c3e7e0142d) }
 
 var fileDescriptor_98b0d2c3e7e0142d = []byte{
-	// 1516 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xb4, 0x58, 0xdd, 0x6e, 0xdb, 0xc6,
-	0x12, 0x3e, 0x94, 0x28, 0x59, 0x1a, 0xc9, 0x8e, 0xbc, 0xb1, 0x13, 0x45, 0x27, 0x3f, 0xc6, 0x26,
-	0x27, 0x71, 0x82, 0x1c, 0xdb, 0xc7, 0x31, 0x4e, 0x83, 0x16, 0x4d, 0x6a, 0xd7, 0x4e, 0x2b, 0xc0,
-	0xb5, 0x0d, 0xda, 0x09, 0x8a, 0xa2, 0x37, 0x8c, 0xb4, 0x76, 0x17, 0x96, 0x48, 0x96, 0xa4, 0xe4,
-	0x18, 0x05, 0x7a, 0xdd, 0x02, 0xbd, 0xe9, 0x03, 0xa4, 0xaf, 0xd1, 0x97, 0xea, 0x55, 0x9f, 0xa0,
-	0x98, 0xfd, 0xe1, 0xaf, 0x28, 0x0b, 0x68, 0x7a, 0x65, 0xcd, 0xce, 0xec, 0xcc, 0xec, 0x37, 0xb3,
-	0xc3, 0x6f, 0x0d, 0xd7, 0x83, 0xde, 0x77, 0x6c, 0x68, 0xaf, 0xcb, 0x3f, 0x6b, 0x9e, 0xef, 0x86,
-	0x2e, 0xa9, 0x4a, 0x89, 0xfe, 0x61, 0xc0, 0xb5, 0x23, 0xee, 0xb1, 0x63, 0xe6, 0xf4, 0x2d, 0xf6,
-	0xfd, 0x88, 0x05, 0x21, 0xe9, 0x40, 0xad, 0xcf, 0xc6, 0xbc, 0xc7, 0xba, 0xbb, 0x6d, 0x63, 0xc5,
-	0x58, 0xad, 0x5b, 0x91, 0x4c, 0x6e, 0x40, 0xd5, 0xe3, 0x1e, 0x6a, 0x4a, 0x42, 0xa3, 0x24, 0xdc,
-	0xe3, 0x8e, 0x42, 0x6f, 0x14, 0x76, 0x77, 0xdb, 0x65, 0xb9, 0x47, 0xcb, 0xe4, 0x05, 0xcc, 0x0d,
-	0x59, 0x10, 0xd8, 0x67, 0xac, 0x6d, 0xae, 0x94, 0x57, 0x1b, 0x9b, 0x0f, 0xd6, 0x54, 0x2e, 0x99,
-	0xc8, 0x6b, 0x5f, 0x49, 0xb3, 0x3d, 0x27, 0xf4, 0x2f, 0x2d, 0xbd, 0xa9, 0xd3, 0x85, 0x66, 0x52,
-	0x41, 0x5a, 0x50, 0x3e, 0x67, 0x97, 0x2a, 0x35, 0xfc, 0x49, 0xee, 0x43, 0x65, 0x6c, 0x0f, 0x46,
-	0x4c, 0x24, 0xd5, 0xd8, 0x9c, 0xd7, 0xfe, 0xdf, 0xe0, 0xa2, 0x25, 0x75, 0x1f, 0x97, 0x9e, 0x1b,
-	0x94, 0x40, 0x2b, 0x8e, 0x19, 0x78, 0xae, 0x13, 0x30, 0xba, 0x05, 0x04, 0xd7, 0x2c, 0xd6, 0x63,
-	0x7c, 0xcc, 0x34, 0x08, 0x77, 0x01, 0xf0, 0x68, 0x27, 0x97, 0x5e, 0x0c, 0x43, 0x62, 0x85, 0xbe,
-	0x2f, 0xc3, 0xf5, 0xd4, 0x36, 0xe9, 0x2d, 0x05, 0x5e, 0x25, 0x03, 0x5e, 0xda, 0xa7, 0x99, 0xf5,
-	0x99, 0x00, 0xb7, 0x9c, 0x02, 0xb7, 0x0d, 0x73, 0xdc, 0x91, 0xd8, 0x4a, 0xd4, 0xb5, 0x48, 0x76,
-	0x62, 0x68, 0x0d, 0x01, 0xed, 0x6a, 0x12, 0xda, 0x4c, 0x6e, 0x93, 0xe1, 0x25, 0x2f, 0xa1, 0xea,
-	0xd9, 0xbe, 0x3d, 0x0c, 0xda, 0x55, 0xe1, 0xe2, 0xd1, 0x34, 0x17, 0x47, 0xc2, 0x52, 0x7a, 0x50,
-	0xdb, 0x3e, 0x60, 0x7d, 0x3a, 0x5f, 0x42, 0x23, 0x11, 0xe1, 0xef, 0x54, 0xfa, 0x18, 0x16, 0x0f,
-	0x9d, 0xae, 0xc3, 0xc3, 0x57, 0x03, 0xf7, 0x62, 0x96, 0xce, 0xa6, 0x50, 0x39, 0x1d, 0xb8, 0x17,
-	0x41, 0xbb, 0x24, 0x50, 0x68, 0x6a, 0xcf, 0x62, 0xbf, 0x54, 0xd1, 0x25, 0x20, 0x49, 0xa7, 0xaa,
-	0x81, 0x9e, 0x61, 0x28, 0x04, 0x0b, 0x35, 0xb3, 0xf6, 0xcf, 0x9f, 0x06, 0xfa, 0x8a, 0x77, 0x4d,
-	0x68, 0x9f, 0xe2, 0xbb, 0x97, 0x6e, 0x8f, 0xab, 0xda, 0xea, 0x45, 0x54, 0xe0, 0x8a, 0x38, 0xda,
-	0x43, 0x7d, 0xb4, 0x7c, 0xfc, 0x89, 0xf5, 0xfd, 0x70, 0x45, 0x39, 0x80, 0x96, 0xc5, 0xce, 0x76,
-	0xc5, 0x81, 0x34, 0x50, 0x14, 0x9a, 0xf2, 0x84, 0x29, 0xa8, 0x52, 0x6b, 0x78, 0xf2, 0x51, 0xc0,
-	0xfc, 0x78, 0xea, 0x48, 0x89, 0xae, 0xc3, 0x62, 0xc2, 0xdf, 0xd5, 0x10, 0xd2, 0x7d, 0xb8, 0x71,
-	0xcc, 0x42, 0xb9, 0xe1, 0xd0, 0x19, 0x70, 0x87, 0xcd, 0x38, 0xf4, 0x5c, 0x61, 0x2c, 0xc2, 0xd7,
-	0x2c, 0x25, 0xd1, 0xc7, 0x70, 0x33, 0xe7, 0x4d, 0x25, 0xb1, 0x00, 0x25, 0xf7, 0x5c, 0x38, 0xaa,
-	0x59, 0x25, 0xf7, 0x9c, 0xde, 0x81, 0xc6, 0xeb, 0x80, 0xf9, 0x3a, 0xda, 0x02, 0x94, 0xa2, 0x38,
-	0xa5, 0xee, 0x2e, 0x7d, 0x02, 0x04, 0xd5, 0x3b, 0x97, 0x7b, 0x43, 0x9b, 0x0f, 0xb4, 0xd5, 0x12,
-	0x54, 0x18, 0xca, 0xca, 0x50, 0x0a, 0xb1, 0xed, 0x89, 0x7b, 0xce, 0x9c, 0x84, 0x6d, 0x88, 0xb2,
-	0xb6, 0x15, 0x02, 0x7d, 0x00, 0xcd, 0xac, 0x95, 0xac, 0x94, 0xb2, 0x12, 0x02, 0xbd, 0x07, 0xf3,
-	0xe9, 0x9a, 0x64, 0xd3, 0xbb, 0x0f, 0x8b, 0xbb, 0x51, 0x3d, 0x8a, 0x8c, 0x9e, 0x43, 0x73, 0xdf,
-	0x3d, 0xe3, 0xce, 0xd4, 0xec, 0x09, 0x01, 0xd3, 0xb3, 0x83, 0x40, 0x15, 0x52, 0xfc, 0xa6, 0x9f,
-	0xc2, 0xe2, 0xe7, 0x3e, 0xb3, 0x43, 0x96, 0x84, 0x68, 0xf6, 0xed, 0x5b, 0x70, 0x5b, 0x0d, 0x74,
-	0x16, 0x1e, 0xd9, 0x41, 0x70, 0xe1, 0xfa, 0xfd, 0x7d, 0xee, 0x9c, 0x4f, 0x87, 0x71, 0x1d, 0xee,
-	0x14, 0xec, 0x2a, 0x28, 0xe1, 0x2b, 0x58, 0x4a, 0x19, 0x4f, 0x45, 0x1e, 0x67, 0xb6, 0xc3, 0x2e,
-	0x8e, 0xe2, 0x5c, 0xb5, 0x48, 0x1f, 0xc1, 0x72, 0xc6, 0x4f, 0x41, 0xc0, 0x1f, 0xa0, 0x22, 0x6e,
-	0x10, 0x79, 0x08, 0x66, 0x78, 0xe9, 0xc9, 0xa2, 0x2d, 0x6c, 0x92, 0xd4, 0xf5, 0x5a, 0x13, 0x25,
-	0x11, 0xfa, 0xb8, 0xba, 0x18, 0xb1, 0xa9, 0xab, 0xbb, 0x05, 0x26, 0xda, 0x10, 0x80, 0xea, 0xf1,
-	0x89, 0xd5, 0x3d, 0xf8, 0xa2, 0xf5, 0x2f, 0x52, 0x03, 0xf3, 0x75, 0xf7, 0xe0, 0xa4, 0x65, 0x90,
-	0x3a, 0x54, 0x5e, 0xed, 0x1f, 0x6e, 0x9f, 0xb4, 0x4a, 0xa4, 0x01, 0x73, 0x3b, 0x87, 0x87, 0xfb,
-	0x7b, 0xdb, 0x07, 0xad, 0x32, 0xdd, 0x80, 0xda, 0x6b, 0x87, 0xbf, 0x3b, 0xe1, 0x43, 0x86, 0x37,
-	0x3e, 0x60, 0x3d, 0x11, 0xbe, 0x6c, 0xe1, 0x4f, 0x2c, 0x83, 0x83, 0x4b, 0x25, 0xb1, 0x24, 0x7e,
-	0x53, 0x17, 0x4c, 0xac, 0x5f, 0xb6, 0x2f, 0xc8, 0x23, 0x0d, 0xbf, 0x9c, 0x0e, 0x8b, 0x3a, 0x7d,
-	0x34, 0x96, 0xed, 0xae, 0x6a, 0xbb, 0x06, 0xf5, 0x9e, 0x68, 0x83, 0xfe, 0x76, 0x28, 0x46, 0x5c,
-	0x63, 0xb3, 0x15, 0x19, 0xab, 0x5c, 0xac, 0xd8, 0x84, 0x6e, 0x43, 0x3d, 0xf2, 0x81, 0x78, 0xdb,
-	0xfd, 0xbe, 0xcf, 0x82, 0x40, 0x85, 0xd6, 0x22, 0xde, 0xec, 0x31, 0xf3, 0xf9, 0x29, 0x67, 0x7d,
-	0x75, 0x7f, 0x23, 0x99, 0x7e, 0x0b, 0xd5, 0xa3, 0xc1, 0xe8, 0x8c, 0x3b, 0xb9, 0xac, 0xf1, 0x84,
-	0xf6, 0x90, 0xe9, 0x46, 0xc3, 0xdf, 0x98, 0xa0, 0x1e, 0xab, 0x41, 0xbb, 0x2c, 0x66, 0x69, 0x2b,
-	0xf9, 0xb1, 0x14, 0xa5, 0x88, 0x4d, 0xe8, 0x7b, 0x03, 0x6a, 0x7a, 0x3d, 0x17, 0x60, 0x05, 0x1a,
-	0x7d, 0x16, 0xf4, 0x7c, 0xee, 0x85, 0xdc, 0x75, 0x54, 0x9c, 0xe4, 0x12, 0xf9, 0x6f, 0x34, 0xb7,
-	0x65, 0xac, 0xe5, 0x6c, 0x2c, 0x31, 0x95, 0xf5, 0x98, 0xc6, 0x29, 0x25, 0x68, 0x41, 0x20, 0x58,
-	0x56, 0xdd, 0x52, 0x12, 0x22, 0x23, 0xa9, 0x98, 0x9c, 0xff, 0x75, 0x4b, 0x8b, 0xf4, 0x27, 0x03,
-	0xe6, 0x53, 0xbe, 0x26, 0xa1, 0x80, 0x4a, 0x8d, 0x82, 0x38, 0xc8, 0xff, 0x70, 0x60, 0x9f, 0xda,
-	0xa3, 0x41, 0x28, 0x1a, 0x50, 0x55, 0x2a, 0x33, 0xf4, 0x53, 0x26, 0xd9, 0xb3, 0x9a, 0xb9, 0xb3,
-	0xd2, 0x5f, 0x0c, 0x80, 0x78, 0xc4, 0xcc, 0x54, 0x8d, 0xe7, 0x50, 0x1f, 0xdb, 0x3e, 0xb7, 0xdf,
-	0x0e, 0xa2, 0x6a, 0x74, 0x74, 0x12, 0xb1, 0xab, 0x37, 0xca, 0xc4, 0x8a, 0x8d, 0xc9, 0x0a, 0x98,
-	0xf8, 0x3d, 0x17, 0x79, 0x64, 0xbf, 0xf4, 0x42, 0x43, 0x7f, 0x35, 0x80, 0xe4, 0x7d, 0x44, 0x69,
-	0x18, 0x89, 0x34, 0x88, 0xba, 0x9c, 0x2a, 0xb5, 0xf0, 0x1f, 0x83, 0xe8, 0x09, 0x98, 0x98, 0x21,
-	0x12, 0x15, 0x6c, 0xb1, 0x40, 0x31, 0xbe, 0x66, 0x8a, 0xae, 0x49, 0x15, 0xb2, 0x0b, 0x13, 0xe5,
-	0x1c, 0x90, 0x1d, 0xa8, 0x79, 0xa2, 0xe1, 0xa3, 0x6f, 0x69, 0x24, 0x67, 0x78, 0x44, 0x39, 0xc7,
-	0x23, 0x36, 0xa2, 0x7e, 0x94, 0x34, 0xbe, 0x9d, 0x8c, 0x3c, 0x89, 0x39, 0x60, 0xaa, 0x6f, 0xb9,
-	0xd3, 0xd7, 0xc4, 0x23, 0x4a, 0x75, 0x87, 0x3b, 0x7d, 0x4b, 0xaa, 0x3e, 0x20, 0xbb, 0xf8, 0x1a,
-	0x4c, 0x74, 0x8c, 0xe7, 0x38, 0xf5, 0xdd, 0xe1, 0xa1, 0xe8, 0x72, 0x4d, 0xbd, 0xe2, 0x15, 0xbc,
-	0x28, 0xa1, 0x8b, 0x39, 0x6b, 0x36, 0x21, 0x25, 0xbc, 0x28, 0xa1, 0xdb, 0xc5, 0x4b, 0xa3, 0x0e,
-	0xaf, 0x45, 0xfa, 0x9b, 0x01, 0x55, 0xd9, 0x0e, 0x33, 0x75, 0x66, 0x96, 0xd2, 0x94, 0xa7, 0x52,
-	0x1a, 0x33, 0x49, 0x69, 0xc8, 0x56, 0xb2, 0xab, 0x25, 0x6c, 0x37, 0xd2, 0x5d, 0x3d, 0xa1, 0xa3,
-	0xe9, 0x8f, 0xb0, 0x90, 0x56, 0x62, 0x5e, 0x07, 0x89, 0x56, 0xc5, 0xdf, 0x33, 0x21, 0x49, 0x9e,
-	0xc1, 0xbc, 0xe7, 0xb3, 0x31, 0x77, 0x47, 0xc1, 0x94, 0xe6, 0x4d, 0xdb, 0xd0, 0xdf, 0x4b, 0x50,
-	0x11, 0x44, 0x23, 0x87, 0x4f, 0xea, 0x9b, 0xa4, 0x19, 0x07, 0xb6, 0x61, 0x68, 0xfb, 0x67, 0x2c,
-	0xf1, 0x5c, 0xd4, 0x72, 0x21, 0x32, 0xfa, 0xa2, 0x55, 0x12, 0x17, 0x6d, 0x05, 0x1a, 0x1e, 0xf3,
-	0x87, 0x3c, 0x08, 0xb8, 0xeb, 0xc8, 0x07, 0x4c, 0xdd, 0x4a, 0x2e, 0xa5, 0x3f, 0x2a, 0x73, 0x57,
-	0x7e, 0x54, 0xc8, 0x53, 0xa8, 0xb1, 0x77, 0x1e, 0xf7, 0x2f, 0xb7, 0xc3, 0x76, 0xad, 0xc0, 0x3c,
-	0xb2, 0xc0, 0x5c, 0xed, 0x5e, 0xc8, 0xc7, 0xac, 0x5d, 0x97, 0xcc, 0x50, 0x4a, 0x64, 0x55, 0x9c,
-	0x01, 0x43, 0x42, 0x81, 0x0f, 0xa5, 0xdf, 0xfc, 0xb9, 0x06, 0x95, 0xbd, 0x31, 0x77, 0x43, 0xf2,
-	0x52, 0x7e, 0x2c, 0x90, 0x94, 0x90, 0x9b, 0x05, 0x2f, 0xe4, 0x4e, 0x3b, 0xaf, 0x90, 0xec, 0x61,
-	0xd5, 0x20, 0x78, 0x93, 0xe2, 0x27, 0x1b, 0xe9, 0x4c, 0x7c, 0xc7, 0x49, 0x37, 0xff, 0x9e, 0xf2,
-	0xc6, 0xdb, 0x30, 0xc8, 0x1e, 0x40, 0xfc, 0xce, 0x21, 0xb7, 0xe2, 0xf7, 0x42, 0xe6, 0x41, 0xd5,
-	0xe9, 0x4c, 0x52, 0xa5, 0xdd, 0xe8, 0x27, 0x46, 0xd2, 0x4d, 0xe6, 0xb1, 0x94, 0x74, 0x93, 0x7d,
-	0x91, 0x6c, 0x18, 0xe4, 0x33, 0xa8, 0x47, 0x2c, 0x9f, 0x44, 0x00, 0x64, 0x1f, 0x12, 0x9d, 0x5b,
-	0x13, 0x34, 0x8a, 0x59, 0x59, 0x70, 0x2d, 0x43, 0xd4, 0xc9, 0x5d, 0x6d, 0x3d, 0xf9, 0x3d, 0xd0,
-	0xb9, 0x57, 0xa8, 0x57, 0x3e, 0x1f, 0x2b, 0xba, 0x73, 0x3d, 0xc9, 0x67, 0xf4, 0xee, 0x66, 0x72,
-	0x91, 0x7c, 0x24, 0xc9, 0xbf, 0x62, 0xf7, 0x71, 0x61, 0xf2, 0x94, 0xbf, 0x68, 0xa3, 0xbc, 0x5b,
-	0x99, 0x8d, 0x49, 0x66, 0x9f, 0xd9, 0xf8, 0x54, 0x5f, 0xc7, 0x25, 0xbd, 0x9c, 0x32, 0x9e, 0x4f,
-	0xad, 0xa2, 0xb5, 0x60, 0xee, 0xb1, 0x75, 0x92, 0xc8, 0x67, 0xad, 0xff, 0x0f, 0x10, 0xb3, 0xf5,
-	0xb8, 0xaa, 0x39, 0x06, 0x9f, 0xdd, 0xd7, 0x87, 0xe5, 0x89, 0x84, 0x9b, 0x3c, 0x88, 0xa1, 0x2e,
-	0x66, 0xf1, 0x9d, 0xff, 0x5c, 0x61, 0xa5, 0xca, 0xb2, 0x0f, 0xf3, 0x29, 0x25, 0xb9, 0x1d, 0xb7,
-	0x45, 0x9e, 0xbc, 0x77, 0xee, 0x14, 0x68, 0x95, 0xb7, 0xf5, 0x68, 0xee, 0x2f, 0xa7, 0x87, 0xb0,
-	0xde, 0xbf, 0x90, 0x5e, 0x26, 0x9f, 0xa4, 0x68, 0xcc, 0xad, 0x3c, 0x1f, 0xd1, 0x1b, 0x49, 0x5e,
-	0xb5, 0x53, 0xfd, 0xc6, 0x3c, 0xb3, 0x3d, 0xfe, 0xb6, 0x2a, 0xfe, 0x47, 0xf7, 0xec, 0xaf, 0x00,
-	0x00, 0x00, 0xff, 0xff, 0x3d, 0xc2, 0xf6, 0xc1, 0xba, 0x13, 0x00, 0x00,
+	// 1552 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xb4, 0x58, 0xdd, 0x6e, 0x1b, 0xc5,
+	0x17, 0xcf, 0xda, 0xeb, 0xaf, 0x63, 0x27, 0x75, 0xa6, 0x69, 0xea, 0xee, 0xbf, 0xed, 0x3f, 0x1a,
+	0xa0, 0x0d, 0xa8, 0x24, 0xc1, 0x0d, 0xa8, 0x42, 0xa2, 0x25, 0xa1, 0x69, 0x62, 0x29, 0x24, 0x61,
+	0x93, 0x56, 0x08, 0x71, 0xb3, 0xb5, 0x27, 0x61, 0x14, 0x7b, 0x77, 0xd9, 0x5d, 0x3b, 0x8d, 0x90,
+	0xb8, 0xe6, 0x82, 0x1b, 0x1e, 0xa0, 0xbc, 0x02, 0x97, 0xbc, 0x14, 0x57, 0x3c, 0x01, 0x9a, 0xaf,
+	0xdd, 0xd9, 0x0f, 0x27, 0x96, 0x28, 0x57, 0xde, 0x33, 0xe7, 0xcc, 0xf9, 0x9e, 0x99, 0xdf, 0x31,
+	0xdc, 0x0c, 0xfb, 0x3f, 0x90, 0x91, 0xb3, 0x2e, 0x7e, 0xd6, 0xfc, 0xc0, 0x8b, 0x3c, 0x54, 0x15,
+	0x14, 0xfe, 0xcb, 0x80, 0x1b, 0xc7, 0xc4, 0x1d, 0x1c, 0x51, 0x9f, 0xd8, 0xe4, 0xc7, 0x31, 0x09,
+	0x23, 0x64, 0x41, 0x7d, 0x40, 0x26, 0xb4, 0x4f, 0x7a, 0xcf, 0x3b, 0xc6, 0x8a, 0xb1, 0xda, 0xb0,
+	0x63, 0x1a, 0x2d, 0x43, 0xd5, 0xa7, 0x3e, 0xe3, 0x94, 0x38, 0x47, 0x52, 0x6c, 0x8f, 0x37, 0x8e,
+	0xfc, 0x71, 0xd4, 0x7b, 0xde, 0x29, 0x8b, 0x3d, 0x8a, 0x46, 0x4f, 0xa1, 0x36, 0x22, 0x61, 0xe8,
+	0x9c, 0x91, 0x8e, 0xb9, 0x52, 0x5e, 0x6d, 0x76, 0xdf, 0x5f, 0x93, 0xbe, 0x64, 0x2c, 0xaf, 0x7d,
+	0x2d, 0xc4, 0x76, 0xdc, 0x28, 0xb8, 0xb4, 0xd5, 0x26, 0xab, 0x07, 0x2d, 0x9d, 0x81, 0xda, 0x50,
+	0x3e, 0x27, 0x97, 0xd2, 0x35, 0xf6, 0x89, 0xde, 0x83, 0xca, 0xc4, 0x19, 0x8e, 0x09, 0x77, 0xaa,
+	0xd9, 0x9d, 0x57, 0xfa, 0x5f, 0xb1, 0x45, 0x5b, 0xf0, 0x3e, 0x2f, 0x3d, 0x31, 0x30, 0x82, 0x76,
+	0x62, 0x33, 0xf4, 0x3d, 0x37, 0x24, 0x78, 0x13, 0x90, 0x4d, 0xfa, 0x84, 0x4e, 0x88, 0x9e, 0x84,
+	0xfb, 0x00, 0x2c, 0xb4, 0x93, 0x4b, 0x3f, 0x49, 0x83, 0xb6, 0x82, 0xdf, 0x96, 0xe1, 0x66, 0x6a,
+	0x9b, 0xd0, 0x96, 0x4a, 0x5e, 0x25, 0x93, 0xbc, 0xb4, 0x4e, 0x33, 0xab, 0x53, 0x4b, 0x6e, 0x39,
+	0x95, 0xdc, 0x0e, 0xd4, 0xa8, 0x2b, 0x72, 0x2b, 0xb2, 0xae, 0x48, 0xb4, 0x9d, 0xa4, 0xd6, 0xe0,
+	0xa9, 0x5d, 0x55, 0xa1, 0x17, 0xf8, 0x56, 0x9c, 0x5e, 0xf4, 0x0c, 0xaa, 0xbe, 0x13, 0x38, 0xa3,
+	0xb0, 0x53, 0xe5, 0x2a, 0x1e, 0x5e, 0xa5, 0xe2, 0x88, 0x4b, 0x0a, 0x0d, 0x72, 0xdb, 0x3b, 0xac,
+	0x8f, 0xb5, 0x07, 0x4d, 0xcd, 0xc2, 0xbf, 0xa9, 0xf4, 0x31, 0x2c, 0x1e, 0xba, 0x3d, 0x97, 0x46,
+	0x2f, 0x86, 0xde, 0xc5, 0x2c, 0x9d, 0x8d, 0xa1, 0x72, 0x3a, 0xf4, 0x2e, 0xc2, 0x4e, 0x89, 0x67,
+	0xa1, 0xa5, 0x34, 0xf3, 0xfd, 0x82, 0x85, 0x97, 0x00, 0xe9, 0x4a, 0x65, 0x03, 0x3d, 0x66, 0xa6,
+	0x58, 0x96, 0x18, 0x67, 0xd6, 0xfe, 0xf9, 0xdb, 0x60, 0xba, 0x92, 0x5d, 0x05, 0xed, 0x33, 0xfd,
+	0xec, 0xa5, 0xdb, 0xe3, 0xba, 0xb6, 0x7a, 0x1a, 0x17, 0xb8, 0xc2, 0x43, 0x7b, 0xa0, 0x42, 0xcb,
+	0xdb, 0x2f, 0xac, 0xef, 0xbb, 0x2b, 0xca, 0x01, 0xb4, 0x6d, 0x72, 0xf6, 0x9c, 0x07, 0xa4, 0x12,
+	0x85, 0xa1, 0x25, 0x22, 0x4c, 0xa5, 0x2a, 0xb5, 0xc6, 0x22, 0x1f, 0x87, 0x24, 0x48, 0x6e, 0x1d,
+	0x41, 0xe1, 0x75, 0x58, 0xd4, 0xf4, 0x5d, 0x9f, 0x42, 0xbc, 0x0f, 0xcb, 0xc7, 0x24, 0x12, 0x1b,
+	0x0e, 0xdd, 0x21, 0x75, 0x67, 0xbd, 0xf4, 0x3c, 0x2e, 0xcc, 0xcd, 0xd7, 0x6d, 0x49, 0xe1, 0x0f,
+	0xe1, 0x76, 0x4e, 0x9b, 0x74, 0x62, 0x01, 0x4a, 0xde, 0x39, 0x57, 0x54, 0xb7, 0x4b, 0xde, 0x39,
+	0x9e, 0xc0, 0xc2, 0x2e, 0x89, 0x5e, 0x86, 0x24, 0x50, 0x06, 0xdb, 0x50, 0x52, 0xa6, 0xf6, 0xe6,
+	0xec, 0x12, 0x37, 0x53, 0x21, 0x23, 0x87, 0x0e, 0x45, 0x90, 0x7b, 0x73, 0xb6, 0x20, 0xd9, 0x7a,
+	0xe4, 0x9d, 0x13, 0x57, 0x94, 0x9d, 0xad, 0x73, 0x12, 0x75, 0xe2, 0xac, 0x98, 0x92, 0x21, 0xe9,
+	0xed, 0x3a, 0x54, 0x4f, 0xe9, 0x30, 0x22, 0x01, 0xfe, 0x06, 0x6e, 0xec, 0x92, 0xe8, 0x84, 0xc9,
+	0x2b, 0xc3, 0xcb, 0xaa, 0x5a, 0xca, 0xb6, 0x20, 0xd1, 0x5d, 0xa8, 0x47, 0x4e, 0x70, 0x46, 0xe2,
+	0x6b, 0x66, 0x6f, 0xce, 0x8e, 0x57, 0x34, 0x95, 0x18, 0xda, 0xbb, 0x2a, 0x6a, 0xa5, 0x73, 0x21,
+	0x09, 0x86, 0x85, 0x82, 0x1f, 0xc0, 0x52, 0x2c, 0xc3, 0x6a, 0x38, 0x4d, 0xee, 0x09, 0xb4, 0xf6,
+	0xbd, 0x33, 0x1a, 0xfb, 0xb6, 0xa4, 0x52, 0x20, 0x44, 0x64, 0x02, 0x10, 0x98, 0xbe, 0x13, 0x86,
+	0xb2, 0xf8, 0xfc, 0x1b, 0x7f, 0x01, 0x8b, 0x5f, 0x05, 0xc4, 0x89, 0x88, 0x9e, 0xd3, 0xd9, 0xb7,
+	0x6f, 0xc2, 0x5d, 0xf6, 0x10, 0xd8, 0x24, 0x24, 0xd1, 0x91, 0x13, 0x86, 0x17, 0x5e, 0x30, 0xd8,
+	0xa7, 0xee, 0xf9, 0x95, 0x9a, 0xf0, 0x3a, 0xdc, 0x9b, 0xb2, 0x6b, 0x4a, 0xd9, 0x5f, 0xc0, 0x52,
+	0x4a, 0x58, 0x53, 0x2f, 0x4a, 0x2a, 0xd5, 0xab, 0x82, 0xd6, 0x5c, 0x72, 0x71, 0x94, 0xf8, 0xaa,
+	0x48, 0xfc, 0x10, 0x6e, 0x65, 0xf4, 0x4c, 0x31, 0xf8, 0x13, 0x54, 0xf8, 0xa9, 0x43, 0x0f, 0xc0,
+	0x8c, 0x2e, 0x7d, 0x51, 0xe4, 0x85, 0x2e, 0x4a, 0x1d, 0xc9, 0x35, 0x5e, 0x12, 0xce, 0x67, 0x9e,
+	0x24, 0x67, 0xb7, 0x25, 0x7b, 0x01, 0x6f, 0x82, 0xc9, 0x64, 0x10, 0x40, 0xf5, 0xf8, 0xc4, 0xee,
+	0x1d, 0xec, 0xb6, 0xe7, 0x50, 0x1d, 0xcc, 0x97, 0xbd, 0x83, 0x93, 0xb6, 0x81, 0x1a, 0x50, 0x79,
+	0xb1, 0x7f, 0xb8, 0x75, 0xd2, 0x2e, 0xa1, 0x26, 0xd4, 0xb6, 0x0f, 0x0f, 0xf7, 0x77, 0xb6, 0x0e,
+	0xda, 0x65, 0xbc, 0x01, 0xf5, 0x97, 0x2e, 0x7d, 0x73, 0x42, 0x47, 0x84, 0xdd, 0x12, 0x21, 0xe9,
+	0x73, 0xf3, 0x65, 0x9b, 0x7d, 0xb2, 0x32, 0xb8, 0x6c, 0xa9, 0xc4, 0x97, 0xf8, 0x37, 0xf6, 0xc0,
+	0x64, 0xf5, 0xcb, 0xf6, 0x05, 0x7a, 0xa8, 0x1f, 0x85, 0x66, 0x77, 0x51, 0xb9, 0xcf, 0x84, 0x77,
+	0x18, 0x43, 0xd5, 0x76, 0x0d, 0x1a, 0x7d, 0xde, 0x06, 0x83, 0xad, 0x88, 0x9f, 0x8f, 0x66, 0xb7,
+	0x1d, 0x0b, 0x4b, 0x5f, 0xec, 0x44, 0x04, 0x6f, 0x41, 0x23, 0xd6, 0xc1, 0xf2, 0xed, 0x0c, 0x06,
+	0x01, 0x09, 0x43, 0x69, 0x5a, 0x91, 0xec, 0x36, 0x98, 0x90, 0x80, 0x9e, 0x52, 0x32, 0x90, 0x67,
+	0x3e, 0xa6, 0xf1, 0xf7, 0x50, 0x3d, 0x1a, 0x8e, 0xcf, 0xa8, 0x9b, 0xf3, 0x9a, 0x45, 0xe8, 0x8c,
+	0x88, 0x6a, 0x34, 0xf6, 0xcd, 0x1c, 0x54, 0x57, 0x71, 0xd8, 0x29, 0xf3, 0xfb, 0x37, 0x76, 0xf0,
+	0x48, 0x32, 0xec, 0x44, 0x04, 0xbf, 0x35, 0xa0, 0xae, 0xd6, 0x73, 0x06, 0x56, 0xa0, 0x39, 0x20,
+	0x61, 0x3f, 0xa0, 0x7e, 0x44, 0x3d, 0x57, 0xda, 0xd1, 0x97, 0xd0, 0xc7, 0xf1, 0x5d, 0x2f, 0x6c,
+	0xdd, 0xca, 0xda, 0xe2, 0x37, 0xb9, 0xba, 0xda, 0xd9, 0xcd, 0xc6, 0xa1, 0x44, 0xc8, 0x91, 0x59,
+	0xc3, 0x96, 0x14, 0xcb, 0x8c, 0x80, 0x6f, 0xe2, 0xcd, 0x68, 0xd8, 0x8a, 0xc4, 0xbf, 0x18, 0x30,
+	0x9f, 0xd2, 0x55, 0x94, 0x05, 0xc6, 0x54, 0x59, 0xe0, 0x81, 0x7c, 0xc2, 0x2e, 0xf9, 0x53, 0x67,
+	0x3c, 0x8c, 0x78, 0x03, 0xca, 0x4a, 0x65, 0x1e, 0x8a, 0x94, 0x48, 0x36, 0x56, 0x33, 0x17, 0x2b,
+	0xfe, 0xd5, 0x00, 0x48, 0xae, 0x98, 0x99, 0xaa, 0xf1, 0x04, 0x1a, 0x13, 0x27, 0xa0, 0xce, 0xeb,
+	0x61, 0x5c, 0x0d, 0x4b, 0x39, 0x91, 0xa8, 0x7a, 0x25, 0x45, 0xec, 0x44, 0x18, 0xad, 0x80, 0xc9,
+	0x30, 0x00, 0xf7, 0x23, 0x8b, 0x0e, 0x38, 0x07, 0xff, 0x66, 0x00, 0xca, 0xeb, 0x88, 0xdd, 0x30,
+	0x34, 0x37, 0x90, 0x3c, 0x9c, 0xd2, 0xb5, 0xe8, 0x3f, 0x4b, 0xd1, 0x47, 0x60, 0x32, 0x0f, 0x19,
+	0xb8, 0x61, 0x2d, 0x16, 0x4a, 0x94, 0xd8, 0xd2, 0xbb, 0xc2, 0x16, 0x2c, 0x86, 0x48, 0x4c, 0x46,
+	0xe7, 0x12, 0x69, 0x41, 0xdd, 0xe7, 0x0d, 0x1f, 0xbf, 0xbf, 0x31, 0x9d, 0xc1, 0x1e, 0xe5, 0x1c,
+	0xf6, 0xd8, 0x88, 0xfb, 0x51, 0x40, 0xff, 0x8e, 0x6e, 0xb9, 0x08, 0x6d, 0x30, 0x57, 0x5f, 0x53,
+	0x77, 0xa0, 0xc0, 0x4a, 0xec, 0xea, 0x36, 0x75, 0x07, 0xb6, 0x60, 0xbd, 0x43, 0x44, 0xf2, 0x2d,
+	0x98, 0x4c, 0x31, 0x8b, 0xe3, 0x34, 0xf0, 0x46, 0x87, 0xbc, 0xcb, 0x15, 0x5c, 0x4b, 0x56, 0xd8,
+	0x41, 0x89, 0x3c, 0xe6, 0xb3, 0x42, 0x20, 0x82, 0x62, 0x07, 0x25, 0xf2, 0x7a, 0xec, 0xd0, 0xc8,
+	0xe0, 0x15, 0x89, 0x7f, 0x37, 0xa0, 0x2a, 0xda, 0x61, 0xa6, 0xce, 0xcc, 0xc2, 0xa0, 0xf2, 0x95,
+	0x30, 0xc8, 0xd4, 0x61, 0x10, 0xda, 0xd4, 0xbb, 0x5a, 0xa4, 0x6d, 0x39, 0xdd, 0xd5, 0x05, 0x1d,
+	0x8d, 0x7f, 0x86, 0x85, 0x34, 0x93, 0xf9, 0x75, 0xa0, 0xb5, 0x2a, 0xfb, 0x9e, 0x29, 0x93, 0xe8,
+	0x31, 0xcc, 0xfb, 0x01, 0x99, 0x50, 0x6f, 0x1c, 0x5e, 0xd1, 0xbc, 0x69, 0x19, 0xfc, 0x67, 0x09,
+	0x2a, 0x1c, 0x98, 0xe4, 0xf2, 0x93, 0x7a, 0x93, 0x1a, 0xca, 0x88, 0xa5, 0xe1, 0x13, 0x39, 0x62,
+	0x2a, 0x7a, 0x6a, 0x66, 0xd4, 0x41, 0xab, 0x68, 0x07, 0x6d, 0x05, 0x9a, 0x3e, 0x09, 0x46, 0x34,
+	0x0c, 0xa9, 0xe7, 0x8a, 0xa1, 0xa7, 0x61, 0xeb, 0x4b, 0xe9, 0x47, 0xa5, 0x76, 0xed, 0xa3, 0x82,
+	0x1e, 0x41, 0x9d, 0xbc, 0xf1, 0x69, 0x70, 0xb9, 0x15, 0x75, 0xea, 0x53, 0xc4, 0x63, 0x09, 0xe6,
+	0xab, 0xd3, 0x8f, 0xe8, 0x84, 0x74, 0x1a, 0x02, 0x4d, 0x0a, 0x0a, 0xad, 0xf2, 0x18, 0x98, 0x49,
+	0x98, 0xa2, 0x43, 0xf2, 0xbb, 0x7f, 0xd4, 0xa0, 0xb2, 0x33, 0xa1, 0x5e, 0x84, 0x9e, 0x41, 0x5d,
+	0xcd, 0xb3, 0xe8, 0xf6, 0x94, 0xa9, 0xda, 0xea, 0xe4, 0x19, 0x02, 0x3d, 0xac, 0x1a, 0x68, 0x0f,
+	0x9a, 0xda, 0x98, 0x87, 0xac, 0xc2, 0xd9, 0x4f, 0xa8, 0xf9, 0xdf, 0x15, 0x73, 0xe1, 0x86, 0x81,
+	0x76, 0x00, 0x92, 0xd9, 0x08, 0xdd, 0x49, 0x66, 0x8c, 0xcc, 0x10, 0x66, 0x59, 0x45, 0xac, 0xb4,
+	0x1a, 0x35, 0x96, 0xe8, 0x6a, 0x32, 0x03, 0x96, 0xae, 0x26, 0x3b, 0xc5, 0x6c, 0x18, 0xe8, 0x4b,
+	0x68, 0xc4, 0x93, 0x01, 0xea, 0x24, 0x9e, 0xa7, 0x87, 0x0f, 0xeb, 0x4e, 0x01, 0x47, 0x22, 0x2b,
+	0x1b, 0x6e, 0x64, 0xc0, 0x3d, 0xba, 0x9f, 0x24, 0xb2, 0x68, 0x86, 0xb0, 0xfe, 0x3f, 0x95, 0x2f,
+	0x75, 0xae, 0x43, 0x4d, 0x4e, 0x01, 0x28, 0x3e, 0xa0, 0xe9, 0xb1, 0xc0, 0x6a, 0xe9, 0x50, 0x07,
+	0x75, 0xa1, 0xae, 0xe0, 0x7b, 0x52, 0xdf, 0x0c, 0xa0, 0xb7, 0xe2, 0x63, 0x26, 0xe4, 0x1e, 0x41,
+	0x85, 0x63, 0x6a, 0xb4, 0xa4, 0xd6, 0x75, 0x88, 0x9d, 0x95, 0xfe, 0x0c, 0x20, 0xc1, 0xd1, 0x49,
+	0xbe, 0x73, 0xd8, 0x3a, 0xbb, 0x6f, 0x00, 0xb7, 0x0a, 0xa1, 0x30, 0x4a, 0xfd, 0xb9, 0x33, 0x0d,
+	0x5f, 0x5b, 0x1f, 0x5c, 0x23, 0x25, 0x13, 0xb6, 0x0f, 0xf3, 0x29, 0x26, 0xba, 0x9b, 0x14, 0x2c,
+	0x0f, 0xab, 0xad, 0x7b, 0x53, 0xb8, 0x52, 0xdb, 0xa7, 0xd0, 0x88, 0xa7, 0x92, 0xa4, 0x29, 0xb2,
+	0xc3, 0x8c, 0xb5, 0x90, 0xbe, 0x3b, 0xd1, 0x16, 0xcc, 0xa7, 0x86, 0x99, 0xc4, 0x89, 0xa2, 0x19,
+	0xc7, 0x42, 0x79, 0x40, 0xb1, 0x5d, 0xfd, 0xce, 0x3c, 0x73, 0x7c, 0xfa, 0xba, 0xca, 0xff, 0x7d,
+	0x7b, 0xfc, 0x4f, 0x00, 0x00, 0x00, 0xff, 0xff, 0x9d, 0x47, 0xcc, 0x72, 0x94, 0x13, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -2194,9 +2228,9 @@ const _ = grpc.SupportPackageIsVersion4
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type EviotClient interface {
 	// sending messages from the pipe
-	PipeSend(ctx context.Context, opts ...grpc.CallOption) (Eviot_PipeSendClient, error)
+	SendPipe(ctx context.Context, opts ...grpc.CallOption) (Eviot_SendPipeClient, error)
 	// receive messages from the pipe
-	PipeReceive(ctx context.Context, in *PipeReceiveRequest, opts ...grpc.CallOption) (Eviot_PipeReceiveClient, error)
+	ReceivePipe(ctx context.Context, in *ReceivePipeRequest, opts ...grpc.CallOption) (Eviot_ReceivePipeClient, error)
 	// do need it?
 	OnInitFlow(ctx context.Context, in *OnInitFlowRequest, opts ...grpc.CallOption) (Eviot_OnInitFlowClient, error)
 	OnPipeInit(ctx context.Context, in *OnPipeInitRequest, opts ...grpc.CallOption) (Eviot_OnPipeInitClient, error)
@@ -2206,16 +2240,14 @@ type EviotClient interface {
 	// rpc AuthDevice(AuthDeviceRequest) returns (AuthDeviceResponse);
 	// set device status: online or offline
 	SetDeviceOnline(ctx context.Context, in *SetDeviceOnlineRequest, opts ...grpc.CallOption) (*SetDeviceOnlineResponse, error)
-	User(ctx context.Context, in *UserRequest, opts ...grpc.CallOption) (*User, error)
-	UserByEmail(ctx context.Context, in *UserByEmailRequest, opts ...grpc.CallOption) (*User, error)
-	UserByToken(ctx context.Context, in *UserByTokenRequest, opts ...grpc.CallOption) (*User, error)
-	Token(ctx context.Context, in *TokenRequest, opts ...grpc.CallOption) (*Token, error)
+	GetUser(ctx context.Context, in *GetUserRequest, opts ...grpc.CallOption) (*User, error)
+	GetToken(ctx context.Context, in *GetTokenRequest, opts ...grpc.CallOption) (*Token, error)
 	Login(ctx context.Context, in *LoginRequest, opts ...grpc.CallOption) (*Token, error)
 	CreateUser(ctx context.Context, in *CreateUserRequest, opts ...grpc.CallOption) (*Token, error)
 	SendResetPasswordLink(ctx context.Context, in *SendResetPasswordLinkRequest, opts ...grpc.CallOption) (*SendResetPasswordLinkResponse, error)
 	ResetPassword(ctx context.Context, in *ResetPasswordRequest, opts ...grpc.CallOption) (*ResetPasswordResponse, error)
-	Device(ctx context.Context, in *DeviceRequest, opts ...grpc.CallOption) (*Device, error)
-	DeviceType(ctx context.Context, in *DeviceTypeRequest, opts ...grpc.CallOption) (*DeviceType, error)
+	GetDevice(ctx context.Context, in *GetDeviceRequest, opts ...grpc.CallOption) (*Device, error)
+	GetDeviceType(ctx context.Context, in *GetDeviceTypeRequest, opts ...grpc.CallOption) (*DeviceType, error)
 }
 
 type eviotClient struct {
@@ -2226,46 +2258,46 @@ func NewEviotClient(cc *grpc.ClientConn) EviotClient {
 	return &eviotClient{cc}
 }
 
-func (c *eviotClient) PipeSend(ctx context.Context, opts ...grpc.CallOption) (Eviot_PipeSendClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_Eviot_serviceDesc.Streams[0], "/schema.Eviot/PipeSend", opts...)
+func (c *eviotClient) SendPipe(ctx context.Context, opts ...grpc.CallOption) (Eviot_SendPipeClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_Eviot_serviceDesc.Streams[0], "/schema.Eviot/SendPipe", opts...)
 	if err != nil {
 		return nil, err
 	}
-	x := &eviotPipeSendClient{stream}
+	x := &eviotSendPipeClient{stream}
 	return x, nil
 }
 
-type Eviot_PipeSendClient interface {
-	Send(*PipeSendRequest) error
-	CloseAndRecv() (*PipeSendResponse, error)
+type Eviot_SendPipeClient interface {
+	Send(*SendPipeRequest) error
+	CloseAndRecv() (*SendPipeResponse, error)
 	grpc.ClientStream
 }
 
-type eviotPipeSendClient struct {
+type eviotSendPipeClient struct {
 	grpc.ClientStream
 }
 
-func (x *eviotPipeSendClient) Send(m *PipeSendRequest) error {
+func (x *eviotSendPipeClient) Send(m *SendPipeRequest) error {
 	return x.ClientStream.SendMsg(m)
 }
 
-func (x *eviotPipeSendClient) CloseAndRecv() (*PipeSendResponse, error) {
+func (x *eviotSendPipeClient) CloseAndRecv() (*SendPipeResponse, error) {
 	if err := x.ClientStream.CloseSend(); err != nil {
 		return nil, err
 	}
-	m := new(PipeSendResponse)
+	m := new(SendPipeResponse)
 	if err := x.ClientStream.RecvMsg(m); err != nil {
 		return nil, err
 	}
 	return m, nil
 }
 
-func (c *eviotClient) PipeReceive(ctx context.Context, in *PipeReceiveRequest, opts ...grpc.CallOption) (Eviot_PipeReceiveClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_Eviot_serviceDesc.Streams[1], "/schema.Eviot/PipeReceive", opts...)
+func (c *eviotClient) ReceivePipe(ctx context.Context, in *ReceivePipeRequest, opts ...grpc.CallOption) (Eviot_ReceivePipeClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_Eviot_serviceDesc.Streams[1], "/schema.Eviot/ReceivePipe", opts...)
 	if err != nil {
 		return nil, err
 	}
-	x := &eviotPipeReceiveClient{stream}
+	x := &eviotReceivePipeClient{stream}
 	if err := x.ClientStream.SendMsg(in); err != nil {
 		return nil, err
 	}
@@ -2275,17 +2307,17 @@ func (c *eviotClient) PipeReceive(ctx context.Context, in *PipeReceiveRequest, o
 	return x, nil
 }
 
-type Eviot_PipeReceiveClient interface {
-	Recv() (*PipeReceiveResponse, error)
+type Eviot_ReceivePipeClient interface {
+	Recv() (*ReceivePipeResponse, error)
 	grpc.ClientStream
 }
 
-type eviotPipeReceiveClient struct {
+type eviotReceivePipeClient struct {
 	grpc.ClientStream
 }
 
-func (x *eviotPipeReceiveClient) Recv() (*PipeReceiveResponse, error) {
-	m := new(PipeReceiveResponse)
+func (x *eviotReceivePipeClient) Recv() (*ReceivePipeResponse, error) {
+	m := new(ReceivePipeResponse)
 	if err := x.ClientStream.RecvMsg(m); err != nil {
 		return nil, err
 	}
@@ -2374,36 +2406,18 @@ func (c *eviotClient) SetDeviceOnline(ctx context.Context, in *SetDeviceOnlineRe
 	return out, nil
 }
 
-func (c *eviotClient) User(ctx context.Context, in *UserRequest, opts ...grpc.CallOption) (*User, error) {
+func (c *eviotClient) GetUser(ctx context.Context, in *GetUserRequest, opts ...grpc.CallOption) (*User, error) {
 	out := new(User)
-	err := c.cc.Invoke(ctx, "/schema.Eviot/User", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/schema.Eviot/GetUser", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *eviotClient) UserByEmail(ctx context.Context, in *UserByEmailRequest, opts ...grpc.CallOption) (*User, error) {
-	out := new(User)
-	err := c.cc.Invoke(ctx, "/schema.Eviot/UserByEmail", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *eviotClient) UserByToken(ctx context.Context, in *UserByTokenRequest, opts ...grpc.CallOption) (*User, error) {
-	out := new(User)
-	err := c.cc.Invoke(ctx, "/schema.Eviot/UserByToken", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *eviotClient) Token(ctx context.Context, in *TokenRequest, opts ...grpc.CallOption) (*Token, error) {
+func (c *eviotClient) GetToken(ctx context.Context, in *GetTokenRequest, opts ...grpc.CallOption) (*Token, error) {
 	out := new(Token)
-	err := c.cc.Invoke(ctx, "/schema.Eviot/Token", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/schema.Eviot/GetToken", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2446,18 +2460,18 @@ func (c *eviotClient) ResetPassword(ctx context.Context, in *ResetPasswordReques
 	return out, nil
 }
 
-func (c *eviotClient) Device(ctx context.Context, in *DeviceRequest, opts ...grpc.CallOption) (*Device, error) {
+func (c *eviotClient) GetDevice(ctx context.Context, in *GetDeviceRequest, opts ...grpc.CallOption) (*Device, error) {
 	out := new(Device)
-	err := c.cc.Invoke(ctx, "/schema.Eviot/Device", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/schema.Eviot/GetDevice", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *eviotClient) DeviceType(ctx context.Context, in *DeviceTypeRequest, opts ...grpc.CallOption) (*DeviceType, error) {
+func (c *eviotClient) GetDeviceType(ctx context.Context, in *GetDeviceTypeRequest, opts ...grpc.CallOption) (*DeviceType, error) {
 	out := new(DeviceType)
-	err := c.cc.Invoke(ctx, "/schema.Eviot/DeviceType", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/schema.Eviot/GetDeviceType", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2467,9 +2481,9 @@ func (c *eviotClient) DeviceType(ctx context.Context, in *DeviceTypeRequest, opt
 // EviotServer is the server API for Eviot service.
 type EviotServer interface {
 	// sending messages from the pipe
-	PipeSend(Eviot_PipeSendServer) error
+	SendPipe(Eviot_SendPipeServer) error
 	// receive messages from the pipe
-	PipeReceive(*PipeReceiveRequest, Eviot_PipeReceiveServer) error
+	ReceivePipe(*ReceivePipeRequest, Eviot_ReceivePipeServer) error
 	// do need it?
 	OnInitFlow(*OnInitFlowRequest, Eviot_OnInitFlowServer) error
 	OnPipeInit(*OnPipeInitRequest, Eviot_OnPipeInitServer) error
@@ -2479,27 +2493,25 @@ type EviotServer interface {
 	// rpc AuthDevice(AuthDeviceRequest) returns (AuthDeviceResponse);
 	// set device status: online or offline
 	SetDeviceOnline(context.Context, *SetDeviceOnlineRequest) (*SetDeviceOnlineResponse, error)
-	User(context.Context, *UserRequest) (*User, error)
-	UserByEmail(context.Context, *UserByEmailRequest) (*User, error)
-	UserByToken(context.Context, *UserByTokenRequest) (*User, error)
-	Token(context.Context, *TokenRequest) (*Token, error)
+	GetUser(context.Context, *GetUserRequest) (*User, error)
+	GetToken(context.Context, *GetTokenRequest) (*Token, error)
 	Login(context.Context, *LoginRequest) (*Token, error)
 	CreateUser(context.Context, *CreateUserRequest) (*Token, error)
 	SendResetPasswordLink(context.Context, *SendResetPasswordLinkRequest) (*SendResetPasswordLinkResponse, error)
 	ResetPassword(context.Context, *ResetPasswordRequest) (*ResetPasswordResponse, error)
-	Device(context.Context, *DeviceRequest) (*Device, error)
-	DeviceType(context.Context, *DeviceTypeRequest) (*DeviceType, error)
+	GetDevice(context.Context, *GetDeviceRequest) (*Device, error)
+	GetDeviceType(context.Context, *GetDeviceTypeRequest) (*DeviceType, error)
 }
 
 // UnimplementedEviotServer can be embedded to have forward compatible implementations.
 type UnimplementedEviotServer struct {
 }
 
-func (*UnimplementedEviotServer) PipeSend(srv Eviot_PipeSendServer) error {
-	return status.Errorf(codes.Unimplemented, "method PipeSend not implemented")
+func (*UnimplementedEviotServer) SendPipe(srv Eviot_SendPipeServer) error {
+	return status.Errorf(codes.Unimplemented, "method SendPipe not implemented")
 }
-func (*UnimplementedEviotServer) PipeReceive(req *PipeReceiveRequest, srv Eviot_PipeReceiveServer) error {
-	return status.Errorf(codes.Unimplemented, "method PipeReceive not implemented")
+func (*UnimplementedEviotServer) ReceivePipe(req *ReceivePipeRequest, srv Eviot_ReceivePipeServer) error {
+	return status.Errorf(codes.Unimplemented, "method ReceivePipe not implemented")
 }
 func (*UnimplementedEviotServer) OnInitFlow(req *OnInitFlowRequest, srv Eviot_OnInitFlowServer) error {
 	return status.Errorf(codes.Unimplemented, "method OnInitFlow not implemented")
@@ -2513,17 +2525,11 @@ func (*UnimplementedEviotServer) RegDevice(ctx context.Context, req *RegDeviceRe
 func (*UnimplementedEviotServer) SetDeviceOnline(ctx context.Context, req *SetDeviceOnlineRequest) (*SetDeviceOnlineResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SetDeviceOnline not implemented")
 }
-func (*UnimplementedEviotServer) User(ctx context.Context, req *UserRequest) (*User, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method User not implemented")
+func (*UnimplementedEviotServer) GetUser(ctx context.Context, req *GetUserRequest) (*User, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetUser not implemented")
 }
-func (*UnimplementedEviotServer) UserByEmail(ctx context.Context, req *UserByEmailRequest) (*User, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method UserByEmail not implemented")
-}
-func (*UnimplementedEviotServer) UserByToken(ctx context.Context, req *UserByTokenRequest) (*User, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method UserByToken not implemented")
-}
-func (*UnimplementedEviotServer) Token(ctx context.Context, req *TokenRequest) (*Token, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Token not implemented")
+func (*UnimplementedEviotServer) GetToken(ctx context.Context, req *GetTokenRequest) (*Token, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetToken not implemented")
 }
 func (*UnimplementedEviotServer) Login(ctx context.Context, req *LoginRequest) (*Token, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Login not implemented")
@@ -2537,61 +2543,61 @@ func (*UnimplementedEviotServer) SendResetPasswordLink(ctx context.Context, req 
 func (*UnimplementedEviotServer) ResetPassword(ctx context.Context, req *ResetPasswordRequest) (*ResetPasswordResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ResetPassword not implemented")
 }
-func (*UnimplementedEviotServer) Device(ctx context.Context, req *DeviceRequest) (*Device, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Device not implemented")
+func (*UnimplementedEviotServer) GetDevice(ctx context.Context, req *GetDeviceRequest) (*Device, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetDevice not implemented")
 }
-func (*UnimplementedEviotServer) DeviceType(ctx context.Context, req *DeviceTypeRequest) (*DeviceType, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method DeviceType not implemented")
+func (*UnimplementedEviotServer) GetDeviceType(ctx context.Context, req *GetDeviceTypeRequest) (*DeviceType, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetDeviceType not implemented")
 }
 
 func RegisterEviotServer(s *grpc.Server, srv EviotServer) {
 	s.RegisterService(&_Eviot_serviceDesc, srv)
 }
 
-func _Eviot_PipeSend_Handler(srv interface{}, stream grpc.ServerStream) error {
-	return srv.(EviotServer).PipeSend(&eviotPipeSendServer{stream})
+func _Eviot_SendPipe_Handler(srv interface{}, stream grpc.ServerStream) error {
+	return srv.(EviotServer).SendPipe(&eviotSendPipeServer{stream})
 }
 
-type Eviot_PipeSendServer interface {
-	SendAndClose(*PipeSendResponse) error
-	Recv() (*PipeSendRequest, error)
+type Eviot_SendPipeServer interface {
+	SendAndClose(*SendPipeResponse) error
+	Recv() (*SendPipeRequest, error)
 	grpc.ServerStream
 }
 
-type eviotPipeSendServer struct {
+type eviotSendPipeServer struct {
 	grpc.ServerStream
 }
 
-func (x *eviotPipeSendServer) SendAndClose(m *PipeSendResponse) error {
+func (x *eviotSendPipeServer) SendAndClose(m *SendPipeResponse) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func (x *eviotPipeSendServer) Recv() (*PipeSendRequest, error) {
-	m := new(PipeSendRequest)
+func (x *eviotSendPipeServer) Recv() (*SendPipeRequest, error) {
+	m := new(SendPipeRequest)
 	if err := x.ServerStream.RecvMsg(m); err != nil {
 		return nil, err
 	}
 	return m, nil
 }
 
-func _Eviot_PipeReceive_Handler(srv interface{}, stream grpc.ServerStream) error {
-	m := new(PipeReceiveRequest)
+func _Eviot_ReceivePipe_Handler(srv interface{}, stream grpc.ServerStream) error {
+	m := new(ReceivePipeRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
 	}
-	return srv.(EviotServer).PipeReceive(m, &eviotPipeReceiveServer{stream})
+	return srv.(EviotServer).ReceivePipe(m, &eviotReceivePipeServer{stream})
 }
 
-type Eviot_PipeReceiveServer interface {
-	Send(*PipeReceiveResponse) error
+type Eviot_ReceivePipeServer interface {
+	Send(*ReceivePipeResponse) error
 	grpc.ServerStream
 }
 
-type eviotPipeReceiveServer struct {
+type eviotReceivePipeServer struct {
 	grpc.ServerStream
 }
 
-func (x *eviotPipeReceiveServer) Send(m *PipeReceiveResponse) error {
+func (x *eviotReceivePipeServer) Send(m *ReceivePipeResponse) error {
 	return x.ServerStream.SendMsg(m)
 }
 
@@ -2673,74 +2679,38 @@ func _Eviot_SetDeviceOnline_Handler(srv interface{}, ctx context.Context, dec fu
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Eviot_User_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(UserRequest)
+func _Eviot_GetUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetUserRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(EviotServer).User(ctx, in)
+		return srv.(EviotServer).GetUser(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/schema.Eviot/User",
+		FullMethod: "/schema.Eviot/GetUser",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(EviotServer).User(ctx, req.(*UserRequest))
+		return srv.(EviotServer).GetUser(ctx, req.(*GetUserRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Eviot_UserByEmail_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(UserByEmailRequest)
+func _Eviot_GetToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetTokenRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(EviotServer).UserByEmail(ctx, in)
+		return srv.(EviotServer).GetToken(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/schema.Eviot/UserByEmail",
+		FullMethod: "/schema.Eviot/GetToken",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(EviotServer).UserByEmail(ctx, req.(*UserByEmailRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _Eviot_UserByToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(UserByTokenRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(EviotServer).UserByToken(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/schema.Eviot/UserByToken",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(EviotServer).UserByToken(ctx, req.(*UserByTokenRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _Eviot_Token_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(TokenRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(EviotServer).Token(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/schema.Eviot/Token",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(EviotServer).Token(ctx, req.(*TokenRequest))
+		return srv.(EviotServer).GetToken(ctx, req.(*GetTokenRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -2817,38 +2787,38 @@ func _Eviot_ResetPassword_Handler(srv interface{}, ctx context.Context, dec func
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Eviot_Device_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(DeviceRequest)
+func _Eviot_GetDevice_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetDeviceRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(EviotServer).Device(ctx, in)
+		return srv.(EviotServer).GetDevice(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/schema.Eviot/Device",
+		FullMethod: "/schema.Eviot/GetDevice",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(EviotServer).Device(ctx, req.(*DeviceRequest))
+		return srv.(EviotServer).GetDevice(ctx, req.(*GetDeviceRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Eviot_DeviceType_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(DeviceTypeRequest)
+func _Eviot_GetDeviceType_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetDeviceTypeRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(EviotServer).DeviceType(ctx, in)
+		return srv.(EviotServer).GetDeviceType(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/schema.Eviot/DeviceType",
+		FullMethod: "/schema.Eviot/GetDeviceType",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(EviotServer).DeviceType(ctx, req.(*DeviceTypeRequest))
+		return srv.(EviotServer).GetDeviceType(ctx, req.(*GetDeviceTypeRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -2866,20 +2836,12 @@ var _Eviot_serviceDesc = grpc.ServiceDesc{
 			Handler:    _Eviot_SetDeviceOnline_Handler,
 		},
 		{
-			MethodName: "User",
-			Handler:    _Eviot_User_Handler,
+			MethodName: "GetUser",
+			Handler:    _Eviot_GetUser_Handler,
 		},
 		{
-			MethodName: "UserByEmail",
-			Handler:    _Eviot_UserByEmail_Handler,
-		},
-		{
-			MethodName: "UserByToken",
-			Handler:    _Eviot_UserByToken_Handler,
-		},
-		{
-			MethodName: "Token",
-			Handler:    _Eviot_Token_Handler,
+			MethodName: "GetToken",
+			Handler:    _Eviot_GetToken_Handler,
 		},
 		{
 			MethodName: "Login",
@@ -2898,23 +2860,23 @@ var _Eviot_serviceDesc = grpc.ServiceDesc{
 			Handler:    _Eviot_ResetPassword_Handler,
 		},
 		{
-			MethodName: "Device",
-			Handler:    _Eviot_Device_Handler,
+			MethodName: "GetDevice",
+			Handler:    _Eviot_GetDevice_Handler,
 		},
 		{
-			MethodName: "DeviceType",
-			Handler:    _Eviot_DeviceType_Handler,
+			MethodName: "GetDeviceType",
+			Handler:    _Eviot_GetDeviceType_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{
 		{
-			StreamName:    "PipeSend",
-			Handler:       _Eviot_PipeSend_Handler,
+			StreamName:    "SendPipe",
+			Handler:       _Eviot_SendPipe_Handler,
 			ClientStreams: true,
 		},
 		{
-			StreamName:    "PipeReceive",
-			Handler:       _Eviot_PipeReceive_Handler,
+			StreamName:    "ReceivePipe",
+			Handler:       _Eviot_ReceivePipe_Handler,
 			ServerStreams: true,
 		},
 		{
