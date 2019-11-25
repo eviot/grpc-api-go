@@ -28,6 +28,23 @@ func NewValue(i interface{}) *Value {
 	return val
 }
 
+func (val *Value) Parse() interface{} {
+	if val == nil {
+		return nil
+	}
+	switch val.Type {
+	case Value_STRING:
+		return val.ToString()
+	case Value_BOOLEAN:
+		return val.ToBool()
+	case Value_UINT:
+		return val.ToUint64()
+	case Value_FLOAT:
+		return val.ToFloat64()
+	}
+	return nil
+}
+
 // SetString sets string in value
 func (val *Value) SetString(s string) {
 	val.Type = Value_STRING
