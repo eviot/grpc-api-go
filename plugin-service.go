@@ -145,7 +145,7 @@ func (*pluginReceiveServiceServer) ReceiveStreamMsg(srv PluginReceiveService_Rec
 	return status.Errorf(codes.Unimplemented, "method ReceiveStreamMsg not implemented")
 }
 
-func SendMsg(ctx context.Context, fromPipe *PipeExt, fromOutputID string, msg map[string]*Value) {
+func SendMsg(ctx context.Context, fromPipe *PipeExt, fromOutputID string, msg map[string]*Any) {
 	for _, bind := range fromPipe.Binds {
 		if bind.FromOutputID != fromOutputID {
 			continue
@@ -176,6 +176,6 @@ func SendMsg(ctx context.Context, fromPipe *PipeExt, fromOutputID string, msg ma
 	}
 }
 
-func SendStreamMsg(ctx context.Context, fromPipe *Pipe, fromOutputID string, msg map[string]*Value) {
+func SendStreamMsg(ctx context.Context, fromPipe *Pipe, fromOutputID string, msg map[string]*Any) {
 	// TODO: implement
 }
