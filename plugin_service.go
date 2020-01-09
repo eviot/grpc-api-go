@@ -147,10 +147,10 @@ func (*pluginReceiveServiceServer) ReceiveStreamMsg(srv PluginReceiveService_Rec
 
 func SendMsg(ctx context.Context, fromPipe *PipeExt, fromOutputID string, msg map[string]*Any) {
 	for _, bind := range fromPipe.Binds {
-		if bind.FromOutputID != fromOutputID {
+		if bind.FromOutputId != fromOutputID {
 			continue
 		}
-		uri := bind.ToPipe.PluginURI
+		uri := bind.ToPipe.PluginUri
 		log.Info(uri)
 		if len(uri) == 0 {
 			continue
@@ -167,7 +167,7 @@ func SendMsg(ctx context.Context, fromPipe *PipeExt, fromOutputID string, msg ma
 		log.Info(conn, ok)
 		req := &ReceiveMsgReq{
 			Pipe:    bind.ToPipe,
-			InputID: bind.ToInputID,
+			InputId: bind.ToInputId,
 			Message: msg,
 		}
 		service := NewPluginReceiveServiceClient(conn)

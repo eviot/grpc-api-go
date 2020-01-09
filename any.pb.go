@@ -21,10 +21,22 @@ var _ = math.Inf
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
 type Any struct {
-	Value                []byte   `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	// Types that are valid to be assigned to Value:
+	//	*Any_StrValue
+	//	*Any_MsgpackValue
+	//	*Any_BoolValue
+	//	*Any_Int32Value
+	//	*Any_Int64Value
+	//	*Any_Uint32Value
+	//	*Any_Uint64Value
+	//	*Any_FloatValue
+	//	*Any_DoubleValue
+	//	*Any_BinaryValue
+	//	*Any_NilValue
+	Value                isAny_Value `protobuf_oneof:"value"`
+	XXX_NoUnkeyedLiteral struct{}    `json:"-"`
+	XXX_unrecognized     []byte      `json:"-"`
+	XXX_sizecache        int32       `json:"-"`
 }
 
 func (m *Any) Reset()         { *m = Any{} }
@@ -52,11 +64,175 @@ func (m *Any) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_Any proto.InternalMessageInfo
 
-func (m *Any) GetValue() []byte {
+type isAny_Value interface {
+	isAny_Value()
+}
+
+type Any_StrValue struct {
+	StrValue string `protobuf:"bytes,1,opt,name=str_value,json=strValue,proto3,oneof"`
+}
+
+type Any_MsgpackValue struct {
+	MsgpackValue []byte `protobuf:"bytes,2,opt,name=msgpack_value,json=msgpackValue,proto3,oneof"`
+}
+
+type Any_BoolValue struct {
+	BoolValue bool `protobuf:"varint,4,opt,name=bool_value,json=boolValue,proto3,oneof"`
+}
+
+type Any_Int32Value struct {
+	Int32Value int32 `protobuf:"varint,5,opt,name=int32_value,json=int32Value,proto3,oneof"`
+}
+
+type Any_Int64Value struct {
+	Int64Value int64 `protobuf:"varint,6,opt,name=int64_value,json=int64Value,proto3,oneof"`
+}
+
+type Any_Uint32Value struct {
+	Uint32Value uint32 `protobuf:"varint,7,opt,name=uint32_value,json=uint32Value,proto3,oneof"`
+}
+
+type Any_Uint64Value struct {
+	Uint64Value uint64 `protobuf:"varint,8,opt,name=uint64_value,json=uint64Value,proto3,oneof"`
+}
+
+type Any_FloatValue struct {
+	FloatValue float32 `protobuf:"fixed32,9,opt,name=float_value,json=floatValue,proto3,oneof"`
+}
+
+type Any_DoubleValue struct {
+	DoubleValue float64 `protobuf:"fixed64,10,opt,name=double_value,json=doubleValue,proto3,oneof"`
+}
+
+type Any_BinaryValue struct {
+	BinaryValue []byte `protobuf:"bytes,11,opt,name=binary_value,json=binaryValue,proto3,oneof"`
+}
+
+type Any_NilValue struct {
+	NilValue bool `protobuf:"varint,12,opt,name=nil_value,json=nilValue,proto3,oneof"`
+}
+
+func (*Any_StrValue) isAny_Value() {}
+
+func (*Any_MsgpackValue) isAny_Value() {}
+
+func (*Any_BoolValue) isAny_Value() {}
+
+func (*Any_Int32Value) isAny_Value() {}
+
+func (*Any_Int64Value) isAny_Value() {}
+
+func (*Any_Uint32Value) isAny_Value() {}
+
+func (*Any_Uint64Value) isAny_Value() {}
+
+func (*Any_FloatValue) isAny_Value() {}
+
+func (*Any_DoubleValue) isAny_Value() {}
+
+func (*Any_BinaryValue) isAny_Value() {}
+
+func (*Any_NilValue) isAny_Value() {}
+
+func (m *Any) GetValue() isAny_Value {
 	if m != nil {
 		return m.Value
 	}
 	return nil
+}
+
+func (m *Any) GetStrValue() string {
+	if x, ok := m.GetValue().(*Any_StrValue); ok {
+		return x.StrValue
+	}
+	return ""
+}
+
+func (m *Any) GetMsgpackValue() []byte {
+	if x, ok := m.GetValue().(*Any_MsgpackValue); ok {
+		return x.MsgpackValue
+	}
+	return nil
+}
+
+func (m *Any) GetBoolValue() bool {
+	if x, ok := m.GetValue().(*Any_BoolValue); ok {
+		return x.BoolValue
+	}
+	return false
+}
+
+func (m *Any) GetInt32Value() int32 {
+	if x, ok := m.GetValue().(*Any_Int32Value); ok {
+		return x.Int32Value
+	}
+	return 0
+}
+
+func (m *Any) GetInt64Value() int64 {
+	if x, ok := m.GetValue().(*Any_Int64Value); ok {
+		return x.Int64Value
+	}
+	return 0
+}
+
+func (m *Any) GetUint32Value() uint32 {
+	if x, ok := m.GetValue().(*Any_Uint32Value); ok {
+		return x.Uint32Value
+	}
+	return 0
+}
+
+func (m *Any) GetUint64Value() uint64 {
+	if x, ok := m.GetValue().(*Any_Uint64Value); ok {
+		return x.Uint64Value
+	}
+	return 0
+}
+
+func (m *Any) GetFloatValue() float32 {
+	if x, ok := m.GetValue().(*Any_FloatValue); ok {
+		return x.FloatValue
+	}
+	return 0
+}
+
+func (m *Any) GetDoubleValue() float64 {
+	if x, ok := m.GetValue().(*Any_DoubleValue); ok {
+		return x.DoubleValue
+	}
+	return 0
+}
+
+func (m *Any) GetBinaryValue() []byte {
+	if x, ok := m.GetValue().(*Any_BinaryValue); ok {
+		return x.BinaryValue
+	}
+	return nil
+}
+
+func (m *Any) GetNilValue() bool {
+	if x, ok := m.GetValue().(*Any_NilValue); ok {
+		return x.NilValue
+	}
+	return false
+}
+
+// XXX_OneofWrappers is for the internal use of the proto package.
+func (*Any) XXX_OneofWrappers() []interface{} {
+	return []interface{}{
+		(*Any_StrValue)(nil),
+		(*Any_MsgpackValue)(nil),
+		(*Any_BoolValue)(nil),
+		(*Any_Int32Value)(nil),
+		(*Any_Int64Value)(nil),
+		(*Any_Uint32Value)(nil),
+		(*Any_Uint64Value)(nil),
+		(*Any_FloatValue)(nil),
+		(*Any_DoubleValue)(nil),
+		(*Any_BinaryValue)(nil),
+		(*Any_NilValue)(nil),
+	}
 }
 
 func init() {
@@ -66,11 +242,22 @@ func init() {
 func init() { proto.RegisterFile("any.proto", fileDescriptor_8caaf9c5567cb817) }
 
 var fileDescriptor_8caaf9c5567cb817 = []byte{
-	// 81 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0xe2, 0x4c, 0xcc, 0xab, 0xd4,
-	0x2b, 0x28, 0xca, 0x2f, 0xc9, 0x17, 0x62, 0x2b, 0x4e, 0xce, 0x48, 0xcd, 0x4d, 0x54, 0x92, 0xe6,
-	0x62, 0x76, 0xcc, 0xab, 0x14, 0x12, 0xe1, 0x62, 0x2d, 0x4b, 0xcc, 0x29, 0x4d, 0x95, 0x60, 0x52,
-	0x60, 0xd4, 0xe0, 0x09, 0x82, 0x70, 0x9c, 0xd8, 0xa2, 0x58, 0xd2, 0x13, 0x0b, 0x32, 0x93, 0xd8,
-	0xc0, 0x7a, 0x8c, 0x01, 0x01, 0x00, 0x00, 0xff, 0xff, 0x66, 0x08, 0x9a, 0xa5, 0x40, 0x00, 0x00,
-	0x00,
+	// 268 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x4c, 0xd1, 0xb1, 0x6e, 0x83, 0x30,
+	0x10, 0xc6, 0x71, 0x2e, 0x01, 0x82, 0x0f, 0xb2, 0x30, 0x75, 0x89, 0xea, 0xb4, 0xaa, 0xe4, 0xa9,
+	0x43, 0x13, 0x65, 0x6f, 0x26, 0x66, 0x86, 0x0e, 0x5d, 0x2a, 0x93, 0xd2, 0xd4, 0x2a, 0xb1, 0x11,
+	0x98, 0x4a, 0x3c, 0x46, 0xdf, 0xb8, 0x02, 0x1f, 0x88, 0xf5, 0xcf, 0x4f, 0x1f, 0xd2, 0x19, 0x99,
+	0xd4, 0xfd, 0x73, 0xdd, 0x18, 0x6b, 0xd2, 0xb0, 0xbd, 0x7c, 0x97, 0x37, 0xf9, 0xf0, 0xb7, 0xc6,
+	0xf5, 0xab, 0xee, 0xd3, 0x1d, 0xb2, 0xd6, 0x36, 0x1f, 0xbf, 0xb2, 0xea, 0xca, 0x3b, 0xe0, 0x20,
+	0x58, 0xe6, 0xe5, 0x51, 0x6b, 0x9b, 0xb7, 0xa1, 0xa4, 0x4f, 0xb8, 0xbd, 0xb5, 0xd7, 0x5a, 0x5e,
+	0x7e, 0x88, 0xac, 0x38, 0x88, 0x24, 0xf3, 0xf2, 0x84, 0xb2, 0x63, 0xf7, 0x88, 0x85, 0x31, 0x15,
+	0x19, 0x9f, 0x83, 0x88, 0x32, 0x2f, 0x67, 0x43, 0x73, 0x60, 0x8f, 0xb1, 0xd2, 0xf6, 0xf0, 0x42,
+	0x22, 0xe0, 0x20, 0x82, 0xcc, 0xcb, 0x71, 0x8c, 0x4b, 0x72, 0x3a, 0x12, 0x09, 0x39, 0x88, 0x35,
+	0x91, 0xd3, 0xd1, 0x91, 0x47, 0x4c, 0xba, 0xe5, 0xcc, 0x86, 0x83, 0xd8, 0x66, 0x5e, 0x1e, 0x77,
+	0x8b, 0x1d, 0x42, 0xf3, 0x50, 0xc4, 0x41, 0xf8, 0x13, 0x9a, 0x96, 0xf6, 0x18, 0x7f, 0x55, 0x46,
+	0x5a, 0x32, 0x8c, 0x83, 0x58, 0x0d, 0x3f, 0x1b, 0xe3, 0xbc, 0xf3, 0x69, 0xba, 0xa2, 0x2a, 0xc9,
+	0x20, 0x07, 0x01, 0xc3, 0x8e, 0xab, 0x33, 0x2a, 0x94, 0x96, 0x4d, 0x4f, 0x28, 0xa6, 0xf3, 0xc4,
+	0xae, 0x3a, 0xb4, 0x43, 0xa6, 0xd5, 0x74, 0x9c, 0x84, 0x8e, 0x13, 0x69, 0xe5, 0x6e, 0x73, 0xde,
+	0x60, 0x30, 0x7e, 0x3a, 0x87, 0xef, 0xfe, 0x55, 0xd6, 0xaa, 0x08, 0xc7, 0xa7, 0x3a, 0xfc, 0x07,
+	0x00, 0x00, 0xff, 0xff, 0x30, 0xa3, 0x41, 0x11, 0xb7, 0x01, 0x00, 0x00,
 }
