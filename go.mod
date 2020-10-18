@@ -3,7 +3,6 @@ module github.com/eviot/grpc-api-go
 go 1.13
 
 require (
-	github.com/eviot/log v0.0.0-00010101000000-000000000000
 	github.com/golang/protobuf v1.3.2
 	github.com/vmihailenco/msgpack/v4 v4.2.1
 	golang.org/x/net v0.0.0-20191209160850-c0dbc17a3553 // indirect
