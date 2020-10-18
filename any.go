@@ -69,6 +69,10 @@ func NewAny(i interface{}) *Any {
 	}
 }
 
+func NewAnyInt32(i int) *Any {
+	return &Any{Value: &Any_Int32Value{int32(i)}}
+}
+
 // Parse return value
 func (any *Any) Parse() (interface{}, error) {
 	if any == nil {

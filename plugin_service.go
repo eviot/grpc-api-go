@@ -11,6 +11,10 @@ import (
 	"google.golang.org/grpc/status"
 )
 
+const (
+	AnyPipe = ""
+)
+
 type ActivePipe interface {
 	InitPipe(req *InitPipeReq)
 	DestroyPipe(req *DestroyPipeReq)
@@ -124,6 +128,9 @@ func (p *pluginReceiveServiceServer) InitPipe(ctx context.Context, req *InitPipe
 	if pipe, ok := p.plugin.activePipes[req.Pipe.PipeDescriptorName]; ok {
 		pipe.InitPipe(req)
 	}
+	if pipe, ok := p.plugin.activePipes[AnyPipe]; ok {
+		pipe.InitPipe(req)
+	}
 	return &InitPipeRes{}, nil
 }
 
@@ -131,11 +138,17 @@ func (p *pluginReceiveServiceServer) DestroyPipe(ctx context.Context, req *Destr
 	if pipe, ok := p.plugin.activePipes[req.PipeDescriptorName]; ok {
 		pipe.DestroyPipe(req)
 	}
+	if pipe, ok := p.plugin.activePipes[AnyPipe]; ok {
+		pipe.DestroyPipe(req)
+	}
 	return &DestroyPipeRes{}, nil
 }
 
 func (p *pluginReceiveServiceServer) ReceiveMsg(ctx context.Context, req *ReceiveMsgReq) (*ReceiveMsgRes, error) {
 	if pipe, ok := p.plugin.inputPipes[req.Pipe.PipeDescriptorName]; ok {
+		go pipe.ReceiveMsg(req)
+	}
+	if pipe, ok := p.plugin.inputPipes[AnyPipe]; ok {
 		go pipe.ReceiveMsg(req)
 	}
 	return &ReceiveMsgRes{}, nil
